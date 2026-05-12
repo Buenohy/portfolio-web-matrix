@@ -2,7 +2,8 @@ import React from 'react';
 import Icon from './Icon';
 import Text from './Text';
 import { tv, type VariantProps, cx } from 'tailwind-variants';
-import { FaFileDownload } from 'react-icons/fa';
+import { ImSpinner2 } from "react-icons/im";
+
 
 export const buttonVariants = tv({
   base: [
@@ -16,23 +17,27 @@ export const buttonVariants = tv({
     variant: {
       primary: [
         'bg-transparent text-black-matrix border-black-matrix shadow-black-matrix',
-        'dark:text-white-pure dark:border-white-pure dark:shadow-white-pure',
+        'dark:text-white-matrix dark:border-white-matrix dark:shadow-white-matrix',
         'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
-        'active:border-green-neon active:shadow-green-neon active:text-green-neon',
+        'active:border-green-matrix active:shadow-green-neon active:text-green-neon',
       ],
       secondary: [
         'bg-transparent text-black-matrix border-gray-port shadow-gray-port',
-        'dark:border-gray-teste dark:shadow-gray-teste dark:text-white-pure',
+        'dark:border-gray-teste dark:shadow-gray-teste dark:text-white-matrix',
         'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
-        'hover:bg-dark-black hover:text-white-pure',
-        'dark:hover:bg-white-pure dark:hover:text-dark-black',
+        'hover:bg-dark-black hover:text-white-matrix',
+        'dark:hover:bg-white-matrix dark:hover:text-dark-black',
         'active:border-green-neon active:shadow-green-neon',
       ],
-      destructive: [
-        'bg-red-pill text-white-construct border-black-matrix shadow-black-matrix',
+      redPill: [
+        'bg-red-pill text-white-construct border-white-matrix shadow-white-matrix',
         'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
       ],
-      ghost: 'border-transparent shadow-none hover:bg-green-neon/10 text-green-terminal hover:translate-y-0',
+      bluePill: [
+        'bg-blue-pill text-white-construct border-white-matrix shadow-white-matrix',
+        'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
+      ],
+      ghost: 'border-transparent shadow-shadow-digital hover:bg-green-neon/10 text-green-terminal hover:translate-y-0',
     },
     size: {
       sm: 'h-9 px-4 py-1 text-xs',
@@ -40,7 +45,7 @@ export const buttonVariants = tv({
       lg: 'h-14 px-8 py-4 text-base',
     },
     disabled: {
-      true: 'cursor-wait animate-pulse',
+      true: 'opacity-50 pointer-events-none',
     },
     handling: {
       true: 'cursor-wait animate-pulse',
@@ -58,9 +63,10 @@ export const buttonTextVariants = tv({
   base: 'font-bold uppercase tracking-widest',
   variants: {
     variant: {
-      primary: 'text-inherit',
-      secondary: 'text-inherit',
-      destructive: 'text-white-construct',
+      primary: 'text-white-construct',
+      secondary: 'text-white-construct',
+      redPill: 'text-white-construct',
+      bluePill: 'text-white-construct',
       ghost: 'text-green-terminal',
     },
     size: {
@@ -76,7 +82,8 @@ export const buttonIconVariants = tv({
     variant: {
       primary: 'fill-current',
       secondary: 'fill-current',
-      destructive: 'fill-white-construct',
+      redPill: 'fill-white-construct',
+      bluePill: 'fill-white-construct',
       ghost: 'fill-green-terminal',
     },
     size: {
@@ -88,7 +95,8 @@ export const buttonIconVariants = tv({
 });
 
 interface ButtonProps
-  extends Omit<React.ComponentProps<'button'>, 'size' | 'disabled'>,
+  extends 
+    Omit<React.ComponentProps<'button'>, 'size' | 'disabled'>,
     VariantProps<typeof buttonVariants> {
   icon?: React.ComponentProps<typeof Icon>['svg'];
   handling?: boolean;
@@ -124,7 +132,7 @@ export default function Button({
 
       {(icon || handling) && (
         <Icon
-          svg={handling ? FaFileDownload : icon!}
+          svg={handling ? ImSpinner2 : icon!}
           animate={handling}
           className={buttonIconVariants({ variant, size })}
         />

@@ -7,7 +7,8 @@
 
 @theme inline {
   --color-black-matrix: #000000;
-  --color-green-neon: #00ff41;
+
+  --color-green-matrix: #00ff41;
   --color-green-terminal: #008f11;
   --color-shadow-digital: #003b00;
 
