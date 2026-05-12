@@ -6,8 +6,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
+  --color-black-matrix: #000000;
+  --color-green-neon: #00ff41;
+  --color-green-terminal: #008f11;
+  --color-shadow-digital: #003b00;
+
+  --color-white-matrix: #e6ffe6;
+  --color-white-construct: #ffffff;
+  --color-white-real-world: #e0e8ee;
+  --color-white-digital-rain: #f4fff4;
+
+  --color-red-pill: #ff2a2a;
+  --color-blue-pill: #0044ff;
+
   --font-poppins: Poppins, sans-serif;
-  --color-main: #fd6f00;
+  --color-main: #00ff41;
   --color-icons: #bababa;
   --color-bg-stacks: #0c1c251a;
   --color-bg-gray: #242424;
