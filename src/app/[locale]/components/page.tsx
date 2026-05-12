@@ -21,10 +21,12 @@ export default function ComponentsPage() {
         <Badge>Badge</Badge>
         <Badge loading>Loading</Badge>
         <Card className="flex flex-col gap-5">
-        <Button variant="ghost" size="sm">Ghost Sm</Button>
-        <Button variant="primary" size="sm">Ghost Sm</Button>
-        <Button >Texte importação</Button>
+          <Button variant="ghost" size="sm">Ghost Sm</Button>
+          <Button variant="primary" size="sm">Ghost Sm</Button>
+          <Button >Texte importação</Button>
         </Card>
+        <Button variant="matrixPrimary">Matrix Primary</Button>
+        <Button variant="matrixSecondary">Matrix Secondary</Button>
       </div>
     </section>
   )

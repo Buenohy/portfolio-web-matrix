@@ -4,10 +4,9 @@ import Text from './Text';
 import { tv, type VariantProps, cx } from 'tailwind-variants';
 import { ImSpinner2 } from "react-icons/im";
 
-
 export const buttonVariants = tv({
   base: [
-    'inline-flex items-center justify-center cursor-pointer',
+    'group inline-flex items-center justify-center cursor-pointer',
     'rounded-xl border-2 font-bold uppercase transition-all duration-400 ease-in-out',
     'backdrop-blur-xs shrink-0 gap-2 whitespace-nowrap outline-none',
     'hover:translate-y-1 focus-visible:translate-y-1 active:translate-y-2',
@@ -19,25 +18,42 @@ export const buttonVariants = tv({
         'bg-transparent text-black-matrix border-black-matrix shadow-black-matrix',
         'dark:text-white-matrix dark:border-white-matrix dark:shadow-white-matrix',
         'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
-        'active:border-green-matrix active:shadow-green-neon active:text-green-neon',
+        'active:border-green-neon active:shadow-green-neon active:text-green-neon',
       ],
       secondary: [
         'bg-transparent text-black-matrix border-gray-port shadow-gray-port',
         'dark:border-gray-teste dark:shadow-gray-teste dark:text-white-matrix',
         'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
-        'hover:bg-dark-black hover:text-white-matrix',
-        'dark:hover:bg-white-matrix dark:hover:text-dark-black',
+        'hover:bg-dark-black hover:text-white-matrix', // Texto muda para branco no hover
+        'dark:hover:bg-white-matrix dark:hover:text-dark-black', // Inverte no dark mode
         'active:border-green-neon active:shadow-green-neon',
       ],
       redPill: [
         'bg-red-pill text-white-construct border-white-matrix shadow-white-matrix',
         'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
+        'hover:bg-red-pill/90',
       ],
       bluePill: [
         'bg-blue-pill text-white-construct border-white-matrix shadow-white-matrix',
         'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
+        'hover:bg-blue-pill/90',
       ],
-      ghost: 'border-transparent shadow-shadow-digital hover:bg-green-neon/10 text-green-terminal hover:translate-y-0',
+      ghost: [
+        'border-transparent shadow-none text-green-terminal hover:bg-green-neon/10 hover:translate-y-0',
+      ],
+      matrixPrimary: [
+        'text-green-terminal border-green-terminal shadow-green-terminal',
+        'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
+        'hover:text-green-neon hover:border-green-neon',
+      ],
+      matrixSecondary: [
+        'text-green-matrix border-green-matrix shadow-green-matrix',
+        'dark:text-green-matrix dark:border-green-matrix dark:shadow-green-matrix',
+        'shadow-[0_8px_0_0] hover:shadow-[0_4px_0_0]',
+        'hover:bg-green-terminal hover:text-black-matrix',
+        'dark:hover:bg-green-terminal dark:hover:text-black-matrix',
+        'active:border-green-neon active:shadow-green-neon',
+      ]
     },
     size: {
       sm: 'h-9 px-4 py-1 text-xs',
@@ -54,21 +70,12 @@ export const buttonVariants = tv({
   defaultVariants: {
     variant: 'primary',
     size: 'md',
-    disabled: false,
-    handling: false,
   },
 });
 
 export const buttonTextVariants = tv({
-  base: 'font-bold uppercase tracking-widest',
+  base: 'font-bold uppercase tracking-widest text-inherit',
   variants: {
-    variant: {
-      primary: 'text-white-construct',
-      secondary: 'text-white-construct',
-      redPill: 'text-white-construct',
-      bluePill: 'text-white-construct',
-      ghost: 'text-green-terminal',
-    },
     size: {
       sm: 'text-xs',
       md: 'text-sm',
@@ -78,14 +85,8 @@ export const buttonTextVariants = tv({
 });
 
 export const buttonIconVariants = tv({
+  base: 'fill-current',
   variants: {
-    variant: {
-      primary: 'fill-current',
-      secondary: 'fill-current',
-      redPill: 'fill-white-construct',
-      bluePill: 'fill-white-construct',
-      ghost: 'fill-green-terminal',
-    },
     size: {
       sm: 'w-4 h-4',
       md: 'w-5 h-5',
@@ -123,10 +124,10 @@ export default function Button({
         handling,
         className: cx(className, icon && 'pr-3'),
       })}
-      disabled={disabled as boolean}
+      disabled={(disabled as boolean) || handling}
       {...props}
     >
-      <Text className={buttonTextVariants({ variant, size })}>
+      <Text className={buttonTextVariants({ size })}>
         {children}
       </Text>
 
@@ -134,7 +135,7 @@ export default function Button({
         <Icon
           svg={handling ? ImSpinner2 : icon!}
           animate={handling}
-          className={buttonIconVariants({ variant, size })}
+          className={buttonIconVariants({ size })}
         />
       )}
     </button>

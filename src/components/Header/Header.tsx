@@ -6,11 +6,11 @@ import { Link as ScrollLink } from 'react-scroll';
 import { NAV_ITEMS, type NavItem } from '@/lib/nav-item';
 import clsx from 'clsx';
 import DarkMode from '../DarkMode/DarkMode';
-import YinYangIcon from '../YinYangIcon/YinYangIcon';
 import { useHeaderVisibility } from '@/components/HeaderVisibilityContext/HeaderVisibilityContext';
 import MenuLang from '../MenuLang/MenuLang';
 import { useTranslations } from 'next-intl';
 import { Link as NextIntlLink } from '@/i18n/navigation';
+import Image from 'next/image';
 
 const MenuItemContent: FC<{ item: NavItem }> = ({ item }) => {
   const t = useTranslations('MenuBar');
@@ -45,15 +45,12 @@ const Header: FC = () => {
         <div className="relative flex w-full items-center justify-between">
           <div className="flex items-center justify-start gap-2 p-2">
             <NextIntlLink href="/">
-              <YinYangIcon
-                className="h-10 w-10 animate-[spin_5000ms_linear_infinite]"
-                aria-label="Icon Yin Yang"
+            <Image 
+              src="/images/matrix-logo.png" 
+              width={100} 
+              height={100} 
+              alt='Matrix Logo' 
               />
-            </NextIntlLink>
-            <NextIntlLink href="/">
-              <h2 className="text-lg font-black text-black dark:text-white">
-                Bueno<span className="text-main">.</span>
-              </h2>
             </NextIntlLink>
           </div>
           <nav className="hidden sm:block">

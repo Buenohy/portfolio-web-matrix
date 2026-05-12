@@ -125,7 +125,7 @@ function DarkModeContent() {
                 >
                   <IconComponent
                     size={22}
-                    className="dark:text-white-pure flex-shrink-0 2xl:h-[40px] 2xl:w-[40px]"
+                    className="dark:text-white-pure shrink-0 2xl:h-10 2xl:w-10"
                   />
                   <span className="dark:text-white-pure text-base font-normal">
                     {item.title}
