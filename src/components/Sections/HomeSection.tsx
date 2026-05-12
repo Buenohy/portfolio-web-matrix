@@ -22,7 +22,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
         <div className="lg:flex lg:gap-8">
           <div>
             <div className="flex justify-start py-5">
-              <Link href="#about" aria-label={translations.avatarAriaLabel}>
+              {/* <Link href="#about" aria-label={translations.avatarAriaLabel}>
                 <Avatar className="md:min-h-10 md:min-w-10">
                   <AvatarImage
                     src="/images/foto-perfil.jpg"
@@ -30,7 +30,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
                   />
                   <AvatarFallback>GB</AvatarFallback>
                 </Avatar>
-              </Link>
+              </Link> */}
             </div>
             <h1 className="dark:text-white-pure text-dark-black mb-8 py-1 text-xl font-light md:text-2xl lg:text-2xl">
               {translations.greeting}

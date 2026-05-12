@@ -11,6 +11,7 @@ import MenuLang from '../MenuLang/MenuLang';
 import { useTranslations } from 'next-intl';
 import { Link as NextIntlLink } from '@/i18n/navigation';
 import Image from 'next/image';
+import MatrixLogo from '@/../public/images/matrix-logo.png'
 
 const MenuItemContent: FC<{ item: NavItem }> = ({ item }) => {
   const t = useTranslations('MenuBar');
@@ -46,7 +47,7 @@ const Header: FC = () => {
           <div className="flex items-center justify-start gap-2 p-2">
             <NextIntlLink href="/">
             <Image 
-              src="/images/matrix-logo.png" 
+              src={MatrixLogo}
               width={100} 
               height={100} 
               alt='Matrix Logo' 
