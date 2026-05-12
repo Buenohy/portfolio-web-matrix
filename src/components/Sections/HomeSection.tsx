@@ -1,6 +1,9 @@
+"use client"
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Link } from '@/i18n/navigation';
 import DownloadCVButton from '@/components/DownloadCvButton/DownloadCvButton';
+import { Canvas } from '@react-three/fiber'
 
 type HomeSectionProps = {
   translations: {
@@ -35,6 +38,14 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             <h1 className="dark:text-white-pure text-dark-black mb-8 py-1 text-xl font-light md:text-2xl lg:text-2xl">
               {translations.greeting}
             </h1>
+            <div className='w-50 h-50'>
+              <Canvas className='bg-green-terminal'>
+                <mesh>
+                  <sphereGeometry />
+                  <meshBasicMaterial />
+                </mesh>
+              </Canvas>
+            </div>
           </div>
           <div className="lg:flex lg:flex-col">
             <h2 className="text-dark-black dark:text-white-pure text-2xl font-bold md:text-7xl lg:text-7xl">
