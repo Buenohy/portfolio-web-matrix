@@ -3,7 +3,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Link } from '@/i18n/navigation';
 import DownloadCVButton from '@/components/DownloadCvButton/DownloadCvButton';
+
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls, ContactShadows, Environment } from '@react-three/fiber'
+import { Model } from '@/components/Neo_shades'
+import { Suspense } from 'react'
 
 type HomeSectionProps = {
   translations: {
@@ -38,14 +42,30 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             <h1 className="dark:text-white-pure text-dark-black mb-8 py-1 text-xl font-light md:text-2xl lg:text-2xl">
               {translations.greeting}
             </h1>
-            <div className='w-50 h-50'>
-              <Canvas className='bg-green-terminal'>
-                <mesh>
-                  <sphereGeometry />
-                  <meshBasicMaterial />
-                </mesh>
+            <div className='w-full h-[400px] md:w-[500px] md:h-[500px] cursor-grab active:cursor-grabbing'>
+              <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+                {/* 1. Iluminação (Obrigatório) */}
+                <ambientLight intensity={1.5} />
+                <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
+                <pointLight position={[-10, -10, -10]} intensity={1} />
+                
+                {/* 2. O Modelo dentro de um Suspense (para carregar) */}
+                <Suspense fallback={null}>
+                    {/* Ajustei a escala e posição para o modelo centralizar */}
+                    <Model scale={0.5} position={[0, -1, 0]} />
+                    
+                    {/* Reflexos bonitos nos óculos */}
+                    <Environment preset="city" /> 
+                    
+                    {/* Sombra suave no chão */}
+                    <ContactShadows position={[0, -1.5, 0]} opacity={0.4} scale={10} blur={2} far={4.5} />
+                </Suspense>
+
+                {/* 3. Controles para girar com o mouse */}
+                <OrbitControls enableZoom={false} />
               </Canvas>
             </div>
+          </div>
           </div>
           <div className="lg:flex lg:flex-col">
             <h2 className="text-dark-black dark:text-white-pure text-2xl font-bold md:text-7xl lg:text-7xl">

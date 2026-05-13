@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/neo_shades.glb')
+  const { nodes, materials } = useGLTF('/public/models/neo_shades.glb')
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -22,4 +22,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/neo_shades.glb')
+useGLTF.preload('/public/models/neo_shades.glb')
