@@ -40,6 +40,12 @@ function MouseFollower({ children }: { children: React.ReactNode }) {
   return <group ref={group}>{children}</group>
 }
 
+const GsapFromTo = () => {
+  useGSAP(() => {
+    GsapFromTo.
+  })
+}
+
 export default function HomeSection({ translations }: HomeSectionProps) {
   return (
     <section
