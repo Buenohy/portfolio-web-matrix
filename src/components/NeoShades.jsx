@@ -10,7 +10,7 @@ Title: Neo Shades
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export function NeoShades(props) {
   const { nodes, materials } = useGLTF('/models/neo_shades.glb')
   return (
     <group {...props} dispose={null}>
