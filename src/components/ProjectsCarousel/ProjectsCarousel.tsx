@@ -53,7 +53,7 @@ export function ProjectsCarousel({
         {projects.map((project) => (
           <CarouselItem
             key={project.id}
-            className="box-content max-w-[260px] pl-5 sm:max-w-[380px]"
+            className="box-content max-w-65 pl-5 sm:max-w-95"
           >
             <ProjectCard
               project={project}
