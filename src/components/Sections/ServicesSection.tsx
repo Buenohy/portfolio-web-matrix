@@ -11,6 +11,12 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Icon } from '@iconify/react';
 
+import { Suspense, useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { Center, ContactShadows, Environment, Float } from '@react-three/drei'
+import * as THREE from 'three'
+import { Computer } from '@/components/Computer'
+
 interface ServiceCardData {
   id: string;
   iconHeader: string;
@@ -29,6 +35,29 @@ type ServicesSectionProps = {
   };
 };
 
+// Lógica de seguir o mouse
+function MouseFollower({ children }: { children: React.ReactNode }) {
+  const group = useRef<THREE.Group>(null!)
+
+  useFrame((state) => {
+    const x = state.pointer.x
+    const y = state.pointer.y
+    // Rotação suave e limitada para não "quebrar" o modelo
+    group.current.rotation.y = THREE.MathUtils.lerp(
+      group.current.rotation.y,
+      x * (Math.PI / 10),
+      0.5
+    )
+    group.current.rotation.x = THREE.MathUtils.lerp(
+      group.current.rotation.x,
+      -y * (Math.PI / 10),
+      0.5
+    )
+  })
+
+  return <group ref={group}>{children}</group>
+}
+
 export default function ServicesSection({
   translations,
 }: ServicesSectionProps) {
@@ -36,6 +65,33 @@ export default function ServicesSection({
     <section className="flex flex-col gap-10 px-5 pb-30 lg:px-10" id="services">
       <div className="mx-auto max-w-7xl">
         <div className="lg:flex lg:self-start">
+          <div className="h-[350px] w-[350px]">
+            <Canvas camera={{ position: [10, 0, 10], fov: 35 }}>
+            <ambientLight intensity={0.5} />
+            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
+            <pointLight position={[-10, -10, -10]} intensity={1} />
+            
+            <Environment preset="city" />
+  
+            <Suspense fallback={null}>
+              <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+                <MouseFollower>
+                  <Center top position={[0, -2.0, 0]}>
+                    <Computer scale={7} />
+                  </Center>
+                </MouseFollower>
+              </Float>
+              
+              <ContactShadows 
+                position={[0, -2.5, 0]} 
+                opacity={0.4} 
+                scale={10} 
+                blur={2} 
+                far={4.5} 
+              />
+            </Suspense>
+          </Canvas>
+          </div>
           <div>
             <h2 className="text-dark-black dark:text-white-pure my-1 text-xl font-bold uppercase sm:text-2xl lg:mb-4">
               {translations.sectionTitle}
@@ -49,7 +105,7 @@ export default function ServicesSection({
           </div>
         </div>
 
-        <ul className="grid grid-cols-1 gap-7 lg:grid-cols-3">
+        {/* <ul className="grid grid-cols-1 gap-7 lg:grid-cols-3">
           {translations.cards.map(
             ({ id, iconHeader, title, description, badges, iconFooter }) => (
               <li key={id} className="flex">
@@ -88,8 +144,8 @@ export default function ServicesSection({
               </li>
             )
           )}
-        </ul>
-      </div>
+        </ul> */}
+    </div>
     </section>
   );
 }

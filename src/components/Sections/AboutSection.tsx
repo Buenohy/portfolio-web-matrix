@@ -8,7 +8,7 @@ import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Center, ContactShadows, Environment, Float } from '@react-three/drei'
 import * as THREE from 'three'
-import { Computer } from '@/components/Computer'
+import { NeoShades } from '@/components/NeoShades'
 
 type AboutSectionProps = {
   translations: {
@@ -66,8 +66,8 @@ export default function AboutSection({ translations }: AboutSectionProps) {
             height={484}
             className="mx-auto my-5 max-h-[464px] w-full max-w-[464px] rounded-2xl object-cover"
           /> */}
-          <div className='relative h-[350px] md:h-[500px] w-full'>
-          <Canvas camera={{ position: [10, 0, 0], fov: 35 }}>
+          <div className="relative h-[350px] md:h-[500px] w-full">
+          <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
             <ambientLight intensity={0.5} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
             <pointLight position={[-10, -10, -10]} intensity={1} />
@@ -77,8 +77,8 @@ export default function AboutSection({ translations }: AboutSectionProps) {
             <Suspense fallback={null}>
               <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
                 <MouseFollower>
-                  <Center top position={[0, -1.0, 0]}>
-                    <Computer scale={5} />
+                  <Center top position={[0, -3.0, 0]}>
+                    <NeoShades scale={1} />
                   </Center>
                 </MouseFollower>
               </Float>
