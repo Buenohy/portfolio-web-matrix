@@ -20,7 +20,7 @@ export default function StacksSection({ translations }: StacksSectionProps) {
       className="mx-auto my-10 flex flex-col gap-10 px-5 pb-20 lg:px-10"
       id="stacks"
     >
-      <h2 className="dark:text-white-pure text-center text-base font-extralight text-black uppercase">
+      <h2 className="dark:text-white-matrix text-center text-base font-extralight text-black-matrix uppercase">
         {translations.sectionTitle}
       </h2>
       <div className="grid grid-cols-3 justify-items-center gap-3 sm:grid-cols-4 lg:grid-cols-6">
