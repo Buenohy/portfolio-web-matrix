@@ -25,6 +25,26 @@ type HomeSectionProps = {
 };
 
 export default function HomeSection({ translations }: HomeSectionProps) {
+  // 1. Cria o estado (começamos assumindo que não é mobile, ou seja, scale 2.5)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // 2. Cria o ouvinte de tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      // Se a tela for menor que 768px (padrão 'md' do Tailwind), isMobile vira true
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Chama uma vez na montagem para pegar o tamanho inicial
+    handleResize()
+
+    // Adiciona o listener para caso o usuário gire o celular ou redimensione a janela
+    window.addEventListener('resize', handleResize)
+    
+    // Limpa o listener quando o componente for destruído
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   // Refs do GSAP e da Cena
   const containerRef = useRef<HTMLDivElement>(null)
   const sceneRef = useRef<THREE.Group>(null!)
@@ -116,8 +136,8 @@ export default function HomeSection({ translations }: HomeSectionProps) {
           <Suspense fallback={null}>
             {/* O grupo sceneRef começa com rotação de 180 graus (costas) */}
             <group ref={sceneRef} rotation={[0, Math.PI, 0]}>
-              <Center top position={[0, -2.0, 0]}>
-                <WhiteRoom scale={2.5} />
+              <Center top position={[0, isMobile ? -0.5 : -2.0, 0]}>
+                <WhiteRoom scale={isMobile ? 1 : 2.5} />
               </Center>
             </group>
             

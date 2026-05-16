@@ -1,5 +1,5 @@
 "use client"
-
+import { useState, useEffect } from 'react'
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { GoArrowUpRight } from 'react-icons/go';
@@ -46,6 +46,25 @@ function MouseFollower({ children }: { children: React.ReactNode }) {
 }
 
 export default function AboutSection({ translations }: AboutSectionProps) {
+  // 1. Cria o estado (começamos assumindo que não é mobile, ou seja, scale 2.5)
+    const [isMobile, setIsMobile] = useState(false)
+  
+    // 2. Cria o ouvinte de tamanho da tela
+    useEffect(() => {
+      const handleResize = () => {
+        // Se a tela for menor que 768px (padrão 'md' do Tailwind), isMobile vira true
+        setIsMobile(window.innerWidth < 768)
+      }
+  
+      // Chama uma vez na montagem para pegar o tamanho inicial
+      handleResize()
+  
+      // Adiciona o listener para caso o usuário gire o celular ou redimensione a janela
+      window.addEventListener('resize', handleResize)
+      
+      // Limpa o listener quando o componente for destruído
+      return () => window.removeEventListener('resize', handleResize)
+    }, [])
   return (
     <section className="px-5 lg:px-10" id="about">
       <div className="mx-auto max-w-7xl">
@@ -77,8 +96,8 @@ export default function AboutSection({ translations }: AboutSectionProps) {
             <Suspense fallback={null}>
               <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
                 <MouseFollower>
-                  <Center top position={[0, -3.0, 0]}>
-                    <NeoShades scale={1} />
+                  <Center top position={[0, isMobile ? -1.5 : -3.0, 0]}>
+                    <NeoShades scale={isMobile ? 0.6 : 1} />
                   </Center>
                 </MouseFollower>
               </Float>
