@@ -98,16 +98,16 @@ function DarkModeContent() {
   return (
     <div className="relative z-100" ref={menuRef}>
       <button
-        className="group bg-main dark:bg-main hover:bg-main active:text-white-pure focus:bg-main flex cursor-pointer items-center justify-center rounded-xl p-2 transition-colors"
+        className="group bg-main dark:bg-main hover:bg-main active:text-white-matrix focus:bg-main flex cursor-pointer items-center justify-center rounded-xl p-2 transition-colors"
         onClick={toggleMenu}
         aria-haspopup="true"
         aria-expanded={isMenuOpen}
         aria-label={t('ariaLabel')}
       >
-        <activeMode.iconComponent className="text-white-pure dark:text-white-pure group-hover:text-white-pure group-active:text-white-pure group-focus:text-white-pure h-6 w-6" />
+        <activeMode.iconComponent className="text-white-matrix dark:text-white-matrix group-hover:text-white-matrix group-active:text-white-matrix group-focus:text-white-matrix h-6 w-6" />
       </button>
       {isMenuOpen && (
-        <nav className="bg-white-pure dark:bg-bg-gray absolute top-full right-0 z-50 mt-3 rounded-xl shadow-xl">
+        <nav className="bg-white-matrix dark:bg-bg-gray absolute top-full right-0 z-50 mt-3 rounded-xl shadow-xl">
           <ul className="flex flex-col gap-2 p-2" role="menu">
             {MenuDarkModeItems.map((item) => {
               const IconComponent = item.iconComponent;
@@ -115,7 +115,7 @@ function DarkModeContent() {
               return (
                 <li
                   key={item.id}
-                  className="hover:text-white-pure focus:text-white-pure dark:hover:text-white-pure hover:bg-main focus:bg-main active:bg-main active:text-white-pure text-dark-black dark:text-white-pure flex cursor-pointer items-center gap-4 rounded-xl px-2 py-3 transition-colors duration-150 focus:rounded-xl active:rounded-xl data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-50"
+                  className="hover:text-white-matrix focus:text-white-matrix dark:hover:text-white-matrix hover:bg-main focus:bg-main active:bg-main active:text-white-matrix text-black-matrix dark:text-white-matrix flex cursor-pointer items-center gap-4 rounded-xl px-2 py-3 transition-colors duration-150 focus:rounded-xl active:rounded-xl data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-50"
                   onClick={(event) => handleModeChange(item, event)}
                   onKeyDown={(event) => handleModeChange(item, event)}
                   tabIndex={0}
@@ -125,9 +125,9 @@ function DarkModeContent() {
                 >
                   <IconComponent
                     size={22}
-                    className="dark:text-white-pure shrink-0 2xl:h-10 2xl:w-10"
+                    className="dark:text-white-matrix shrink-0 2xl:h-10 2xl:w-10"
                   />
-                  <span className="dark:text-white-pure text-base font-normal">
+                  <span className="dark:text-white-matrix text-base font-normal">
                     {item.title}
                   </span>
                 </li>
