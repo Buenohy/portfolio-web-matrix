@@ -1,12 +1,12 @@
 "use client"
-
+import { useState, useEffect } from 'react'
 import IconsSocialMedia from '@/components/IconsSocialMedia/IconsSocialMedia';
 import { Link } from '@/i18n/navigation';
 import { GoArrowUpRight } from 'react-icons/go';
 
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Center, ContactShadows, Environment, Float } from '@react-three/drei'
+import { Center, ContactShadows, Environment, Float, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { PanasonicRc6088Am } from '@/components/models/PanasonicRc6088Am'
 
@@ -44,10 +44,30 @@ function MouseFollower({ children }: { children: React.ReactNode }) {
 }
 
 export default function ContactSection({ translations }: ContactSectionProps) {
+  // 1. Cria o estado (começamos assumindo que não é mobile, ou seja, scale 2.5)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // 2. Cria o ouvinte de tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      // Se a tela for menor que 768px (padrão 'md' do Tailwind), isMobile vira true
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Chama uma vez na montagem para pegar o tamanho inicial
+    handleResize()
+
+    // Adiciona o listener para caso o usuário gire o celular ou redimensione a janela
+    window.addEventListener('resize', handleResize)
+    
+    // Limpa o listener quando o componente for destruído
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   return (
     <section id="contact" className="bg-main px-5 lg:px-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center py-15 text-center 2xl:py-64">
+      <div className="mx-auto flex max-w-5xl flex-col items-center justify-center py-15 text-center 2xl:py-64">
         <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
+        <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={10} />
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
         <pointLight position={[-10, -10, -10]} intensity={1} />
@@ -56,11 +76,9 @@ export default function ContactSection({ translations }: ContactSectionProps) {
 
         <Suspense fallback={null}>
           <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-            <MouseFollower>
               <Center top position={[0, -1.0, 0]}>
-                <PanasonicRc6088Am scale={7} />
+                <PanasonicRc6088Am scale={isMobile ? 4 : 7} />
               </Center>
-            </MouseFollower>
           </Float>
           
           <ContactShadows 

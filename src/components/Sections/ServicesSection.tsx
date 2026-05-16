@@ -11,12 +11,12 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Icon } from '@iconify/react';
 
-import { Suspense, useRef } from 'react'
+import { Suspense, useRef, useState, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Center, ContactShadows, Environment, Float, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { HackersBasement } from '@/components/models/HackersBasement'
-import { Matrix2 } from '@/components/models/Matrix2'
+import { Computer } from '@/components/models/Computer'
 interface ServiceCardData {
   id: string;
   iconHeader: string;
@@ -61,11 +61,30 @@ function MouseFollower({ children }: { children: React.ReactNode }) {
 export default function ServicesSection({
   translations,
 }: ServicesSectionProps) {
+  // 1. Cria o estado (começamos assumindo que não é mobile, ou seja, scale 2.5)
+    const [isMobile, setIsMobile] = useState(false)
+  
+    // 2. Cria o ouvinte de tamanho da tela
+    useEffect(() => {
+      const handleResize = () => {
+        // Se a tela for menor que 768px (padrão 'md' do Tailwind), isMobile vira true
+        setIsMobile(window.innerWidth < 768)
+      }
+  
+      // Chama uma vez na montagem para pegar o tamanho inicial
+      handleResize()
+  
+      // Adiciona o listener para caso o usuário gire o celular ou redimensione a janela
+      window.addEventListener('resize', handleResize)
+      
+      // Limpa o listener quando o componente for destruído
+      return () => window.removeEventListener('resize', handleResize)
+    }, [])
   return (
     <section className="flex flex-col gap-10 px-5 pb-30 lg:px-10" id="services">
       <div className="mx-auto max-w-7xl">
         <div className="lg:flex lg:self-start">
-          <div className="h-[300px] w-[300px]">
+          <div className="h-[500px] w-[500px]">
             <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
               <OrbitControls />
               <ambientLight intensity={0.5} />
@@ -76,8 +95,8 @@ export default function ServicesSection({
   
             <Suspense fallback={null}>
               <Center top position={[0, -2.0, 0]}>
-                    <Matrix2 scale={1} />
-                  </Center>
+                <Computer scale={isMobile ? 2 : 8} />
+              </Center>
               <ContactShadows 
                 position={[0, -2.5, 0]} 
                 opacity={0.4} 

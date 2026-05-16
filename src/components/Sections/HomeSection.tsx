@@ -136,7 +136,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
           <Suspense fallback={null}>
             {/* O grupo sceneRef começa com rotação de 180 graus (costas) */}
             <group ref={sceneRef} rotation={[0, Math.PI, 0]}>
-              <Center top position={[0, isMobile ? -0.5 : -2.0, 0]}>
+              <Center top position={[0, isMobile ? -1 : -2.0, 0]}>
                 <WhiteRoom scale={isMobile ? 1 : 2.5} />
               </Center>
             </group>
