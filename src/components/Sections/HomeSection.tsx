@@ -104,7 +104,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
         // 3. Mergulho: Aumenta o Z para "atravessar" a câmera
         .to(sceneRef.current.position, {
           z: 28,     // Valor para atravessar a tela totalmente
-          y: 0,      // Alinhamento do centro da TV com a câmera
+          y: isMobile ? 1 : 0,      // Alinhamento do centro da TV com a câmera
           ease: "power2.in"
         }, ">") 
         // 4. Escurece a tela no final do mergulho para transição
