@@ -241,7 +241,7 @@
     @apply text-white-pure dark:text-white-pure bg-main shadow-dark-black/10 dark:shadow-white-pure/10 w-full self-stretch rounded-xl p-0.5 text-center text-xs shadow-xl transition-transform duration-500 ease-in-out group-hover:scale-115 group-hover:animate-bounce group-hover:duration-100 group-focus:scale-115 group-focus:animate-bounce group-focus:duration-100 group-active:scale-115 group-active:animate-bounce group-active:duration-100 sm:text-base xl:text-xl;
   }
   .stack-name-project {
-    @apply bg-green-terminal text-white-matrix dark:bg-green-terminal dark:text-white-matrix absolute bottom-full mb-2 w-max scale-95 transform-gpu rounded-xl px-2 py-1 text-xs font-normal opacity-0 shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100 2xl:text-xl;
+    @apply bg-green-terminal text-white-matrix dark:bg-green-terminal dark:text-white-matrix absolute bottom-full mb-2 w-max scale-95 transform-gpu rounded-xl px-2 py-1 text-xs font-normal opacity-0 shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100 group-active:scale-100 group-active:opacity-100 2xl:text-xl;
   }
 }
 

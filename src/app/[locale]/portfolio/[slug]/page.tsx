@@ -60,7 +60,7 @@ export default function ProjectDetailsPage() {
           aria-label={t('detailsSectionAriaLabel')}
           className="flex flex-col px-5 md:col-span-7 md:overflow-y-auto md:px-10 lg:col-span-5 xl:col-span-4 2xl:col-span-3"
         >
-          <div className="flex-grow">
+          <div className="grow">
             <header>
               <h1 className="text-dark-black dark:text-white-pure mt-5 mb-2 text-2xl font-semibold 2xl:text-4xl">
                 {project.title}
