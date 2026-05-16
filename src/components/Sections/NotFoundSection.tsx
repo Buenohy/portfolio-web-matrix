@@ -6,6 +6,9 @@ import { Canvas } from '@react-three/fiber';
 import { Center, ContactShadows, Environment, OrbitControls } from '@react-three/drei';
 import { MetalSpoon } from '@/components/models/MetalSpoon';
 
+import { useState, useEffect } from 'react'
+
+
 type NotFoundClientProps = {
   translations: {
     title: string;
@@ -16,6 +19,25 @@ type NotFoundClientProps = {
 };
 
 export default function NotFoundClient({ translations }: NotFoundClientProps) {
+  // 1. Cria o estado (começamos assumindo que não é mobile, ou seja, scale 2.5)
+    const [isMobile, setIsMobile] = useState(false)
+  
+  // 2. Cria o ouvinte de tamanho da tela
+  useEffect(() => {
+  const handleResize = () => {
+    // Se a tela for menor que 768px (padrão 'md' do Tailwind), isMobile vira true
+    setIsMobile(window.innerWidth < 768)
+  }
+
+  // Chama uma vez na montagem para pegar o tamanho inicial
+  handleResize()
+
+  // Adiciona o listener para caso o usuário gire o celular ou redimensione a janela
+  window.addEventListener('resize', handleResize)
+  
+  // Limpa o listener quando o componente for destruído
+  return () => window.removeEventListener('resize', handleResize)
+  }, [])
   return (
     <section className="flex min-h-screen flex-col items-center justify-center px-5 text-center">
       <h1 className="animate-shake my-4 text-6xl font-semibold text-black dark:text-white">
@@ -28,7 +50,7 @@ export default function NotFoundClient({ translations }: NotFoundClientProps) {
         {translations.description}
       </p>
 
-      <div className="h-[400px] w-full">
+      <div className="h-[300px] w-full">
         <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
           <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={10} />
           <ambientLight intensity={0.5} />
@@ -36,8 +58,8 @@ export default function NotFoundClient({ translations }: NotFoundClientProps) {
           <Environment preset="city" />
 
           <Suspense fallback={null}>
-            <Center top position={[0, -3.0, 0]}>
-              <MetalSpoon scale={30} />
+            <Center top position={[0, isMobile ? -2.5 : -3.0, 0]}>
+              <MetalSpoon scale={isMobile ? 25 : 30} />
             </Center>
             <ContactShadows 
               position={[0, -2.5, 0]} 
