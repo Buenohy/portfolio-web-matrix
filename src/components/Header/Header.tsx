@@ -23,7 +23,7 @@ const MenuItemContent: FC<{ item: NavItem }> = ({ item }) => {
 
   const textStyles = clsx(
     'text-base font-normal text-icon-menu dark:text-tag-dark transition-all duration-300',
-    'group-[.active]:font-semibold group-[.active]:text-dark-black group-[.active]:dark:text-white-pure'
+    'group-[.active]:font-semibold group-[.active]:text-black-matrix group-[.active]:dark:text-white-matrix'
   );
   return (
     <div className="relative py-2">
