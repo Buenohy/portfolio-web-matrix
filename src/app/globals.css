@@ -217,7 +217,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply text-foreground bg-white-pure dark:bg-dark-black;
+    @apply text-foreground bg-white-matrix dark:bg-black-matrix;
     background-image: var(--background-image-complex-grid);
     background-size: var(--background-size-complex-grid);
     background-color: var(--background);
