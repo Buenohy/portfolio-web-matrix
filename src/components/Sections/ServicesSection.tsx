@@ -16,7 +16,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Center, ContactShadows, Environment, Float, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { HackersBasement } from '@/components/models/HackersBasement'
-
+import { Matrix2 } from '@/components/models/Matrix2'
 interface ServiceCardData {
   id: string;
   iconHeader: string;
@@ -76,7 +76,7 @@ export default function ServicesSection({
   
             <Suspense fallback={null}>
               <Center top position={[0, -2.0, 0]}>
-                    <HackersBasement scale={1} />
+                    <Matrix2 scale={1} />
                   </Center>
               <ContactShadows 
                 position={[0, -2.5, 0]} 

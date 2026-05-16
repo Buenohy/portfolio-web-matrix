@@ -1,181 +1,184 @@
 "use client"
 
-import { Suspense, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Center, ContactShadows, Environment, Float, OrbitControls } from '@react-three/drei'
+import { Suspense, useRef, useState, useEffect } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { Center, ContactShadows, Environment } from '@react-three/drei'
 import * as THREE from 'three'
-import { NeoShades } from '@/components/models/NeoShades'
 import { WhiteRoom } from '@/components/models/WhiteRoom'
 import DownloadCVButton from '@/components/DownloadCvButton/DownloadCvButton'
 
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+// Registra o plugin do GSAP
+gsap.registerPlugin(ScrollTrigger)
 
 type HomeSectionProps = {
   translations: {
     greeting: string;
-    mainTitle: React.ReactNode;
+    mainTitle: React.ReactNode; 
     cvButton: string;
     avatarAriaLabel: string;
     avatarAlt: string;
   };
 };
 
-// Lógica de seguir o mouse
-function MouseFollower({ children }: { children: React.ReactNode }) {
-  const group = useRef<THREE.Group>(null!)
-
-  useFrame((state) => {
-    const x = state.pointer.x
-    const y = state.pointer.y
-    // Rotação suave e limitada para não "quebrar" o modelo
-    group.current.rotation.y = THREE.MathUtils.lerp(
-      group.current.rotation.y,
-      x * (Math.PI / 10),
-      0.5
-    )
-    group.current.rotation.x = THREE.MathUtils.lerp(
-      group.current.rotation.x,
-      -y * (Math.PI / 10),
-      0.5
-    )
-  })
-
-  return <group ref={group}>{children}</group>
-}
-
-
 export default function HomeSection({ translations }: HomeSectionProps) {
-  const container = useRef<HTMLDivElement>(null)
+  // Refs do GSAP e da Cena
+  const containerRef = useRef<HTMLDivElement>(null)
+  const sceneRef = useRef<THREE.Group>(null!)
+  
+  // Ref Pai (Camada da UI) - Usado no ScrollTrigger
+  const uiLayerRef = useRef<HTMLDivElement>(null)
+  
+  // Refs Filhos - Usados na animação de Entrada
+  const textLeftRef = useRef<HTMLDivElement>(null)
+  const textRightRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLDivElement>(null)
+  
+  // Estado para garantir que o GSAP só inicie após o modelo 3D carregar
+  const [isLoaded, setIsLoaded] = useState(false)
 
-  // ANIMAÇÃO GSAP
   useGSAP(() => {
-    // repeat: -1 faz o loop ser infinito
-    // repeatDelay: 5 faz a animação esperar 5 segundos antes de começar de novo
-    const tl = gsap.timeline({ 
-      repeat: -1, 
-      repeatDelay: 2,
-      defaults: { ease: "power4.out" } 
-    });
-
-    // 1. Animação de ENTRADA
-    tl.fromTo(".animate-text", 
-      { y: 100, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 1.5, stagger: 0.2 }
-    )
+    // --- 1. ANIMAÇÃO DE ENTRADA (Aparece ao carregar a página) ---
+    // Anima os elementos filhos individualmente
+    const introTl = gsap.timeline({ defaults: { ease: "power4.out" } });
     
-    tl.fromTo(".animate-button",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1 },
+    introTl.fromTo([textLeftRef.current, textRightRef.current], 
+      { y: 50, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 1.5, stagger: 0.2, delay: 0.5 }
+    );
+
+    introTl.fromTo(buttonRef.current,
+      { scale: 0.8, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1 },
       "-=1"
-    )
+    );
 
-    // 2. Animação de SAÍDA (Opcional - para o texto sumir antes de repetir)
-    // Se você não colocar isso, o texto vai "piscar" e voltar para baixo do nada
-    tl.to(".animate-text, .animate-button", {
-      opacity: 0,
-      y: -20, // Sobe um pouquinho enquanto some
-      duration: 1,
-      delay: 3 // Tempo que o texto fica visível antes de sumir para o próximo ciclo
-    })
+    // --- 2. ANIMAÇÃO DE SCROLL (Giro e Mergulho na TV) ---
+    // Só cria esta timeline se o modelo 3D (sceneRef) estiver pronto
+    if (isLoaded && sceneRef.current) {
+      const scrollTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "+=500%", // Deixa a animação mais longa e suave
+          scrub: 3,      // Aumenta o "peso/inércia" da transição
+          pin: true,     // Trava a seção na tela
+        }
+      });
 
-  }, { scope: container })
+      scrollTl
+        // 1. Rotação: De costas (Math.PI) para frente (0)
+        .fromTo(sceneRef.current.rotation, 
+          { y: Math.PI }, 
+          { y: 0, ease: "none" }
+        )
+        // 2. Some com TODOS os textos e botão animando apenas a div "Pai"
+        .to(uiLayerRef.current, {
+          opacity: 0,
+          y: -150,
+          ease: "none"
+        }, 0)
+        // 3. Mergulho: Aumenta o Z para "atravessar" a câmera
+        .to(sceneRef.current.position, {
+          z: 28,     // Valor para atravessar a tela totalmente
+          y: 0,      // Alinhamento do centro da TV com a câmera
+          ease: "power2.in"
+        }, ">") 
+        // 4. Escurece a tela no final do mergulho para transição
+        .to(".overlay-black", { opacity: 1, duration: 0.1 });
+
+      // Atualiza o ScrollTrigger para garantir os cálculos corretos de altura
+      ScrollTrigger.refresh();
+    }
+  }, { dependencies: [isLoaded], scope: containerRef });
 
   return (
     <section
-      ref={container}
+      ref={containerRef}
       id="home"
-      className="relative flex h-screen w-full items-center justify-center overflow-hidden"
+      className="relative h-screen w-full overflow-hidden"
     >
+      {/* Camada de transição preta no final da animação */}
+      <div className="overlay-black pointer-events-none absolute inset-0 z-20 opacity-0" />
+
+      {/* 1. LAYER 3D (Fundo) */}
       <div className="absolute inset-0 z-0">
-        {/* <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
-          <ambientLight intensity={0.5} />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
-          <pointLight position={[-10, -10, -10]} intensity={1} />
-          
-          <Environment preset="city" />
-
-          <Suspense fallback={null}>
-            <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-              <MouseFollower>
-                <Center top position={[0, -4.0, 0]}>
-                  <NeoShades scale={1} />
-                </Center>
-              </MouseFollower>
-            </Float>
-            
-            <ContactShadows 
-              position={[0, -2.5, 0]} 
-              opacity={0.4} 
-              scale={10} 
-              blur={2} 
-              far={4.5} 
-            />
-          </Suspense>
-        </Canvas> */}
         <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
-          <OrbitControls />
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={1.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
           <pointLight position={[-10, -10, -10]} intensity={1} />
           
           <Environment preset="city" />
 
           <Suspense fallback={null}>
-            
-              
-                <Center top position={[0, -2.0, 0]}>
-                  <WhiteRoom scale={2} />
-                </Center>
-              
-            
+            {/* O grupo sceneRef começa com rotação de 180 graus (costas) */}
+            <group ref={sceneRef} rotation={[0, Math.PI, 0]}>
+              <Center top position={[0, -2.0, 0]}>
+                <WhiteRoom scale={2.5} />
+              </Center>
+            </group>
             
             <ContactShadows 
               position={[0, -2.5, 0]} 
               opacity={0.4} 
-              scale={10} 
+              scale={15} 
               blur={2} 
               far={4.5} 
             />
+
+            {/* Helper para avisar quando o Suspense terminar */}
+            <SceneInit onReady={() => setIsLoaded(true)} />
           </Suspense>
         </Canvas>
       </div>
 
-      {/* 2. LAYER DE CONTEÚDO (TEXTOS) */}
-      {/* pointer-events-none permite que o mouse "atravesse" o texto e mova o 3D */}
-      <div className="pointer-events-none relative z-10 flex h-full w-full max-w-7xl flex-col justify-between px-6 py-20 md:px-12">
+      {/* 2. LAYER DE INTERFACE (Textos) - Adicionado a ref do Pai (uiLayerRef) */}
+      <div 
+        ref={uiLayerRef}
+        className="pointer-events-none relative z-10 flex h-full w-full max-w-7xl flex-col justify-between px-6 py-20 md:px-12 mx-auto"
+      >
         
-        <div className="flex w-full flex-col items-start justify-between gap-10 md:flex-row md:items-center mt-50">
-          {/* LADO ESQUERDO (Greeting) */}
-          <div className="max-w-md animate-text">
-            <h1 className="text-xl font-light text-green-terminal md:text-xl tracking-tighter">
-              {/* {translations.greeting} */}
-              Hello! I'm
+        <div className="flex w-full flex-col items-start justify-between gap-10 md:flex-row md:items-center mt-32">
+          {/* LADO ESQUERDO */}
+          <div ref={textLeftRef} className="max-w-md opacity-0">
+            <h1 className="text-xl font-light text-green-500 tracking-tighter">
+              {translations.greeting || "Hello! I'm"}
             </h1>
-            <h1 className="text-xl font-bold text-white-matrix md:text-4xl uppercase tracking-tighter">
+            <h1 className="text-4xl font-bold text-white uppercase tracking-tighter md:text-6xl">
               GABRIEL <br/> BUENO
             </h1>
           </div>
 
-          {/* LADO DIREITO (Main Title) */}
-          <div className="max-w-xl md:text-left animate-text">
-            <h2 className="text-xl leading-tight text-green-terminal md:text-xl font-light">
-              {/* {translations.mainTitle} */}
+          {/* LADO DIREITO */}
+          <div ref={textRightRef} className="max-w-xl text-left md:text-right opacity-0">
+            <h2 className="text-xl leading-tight text-green-500 font-light">
               A Full Stack
             </h2>
-            <h2 className="text-4xl font-bold leading-tight text-white md:text-4xl uppercase">
-              Software
-            </h2>
-            <h2 className="text-4xl font-bold leading-tight text-white md:text-4xl uppercase">
-              Engineer
+            <h2 className="text-4xl font-bold leading-tight text-white uppercase md:text-6xl">
+              Software <br/> Engineer
             </h2>
           </div>
         </div>
 
-        {/* <div className="pointer-events-auto flex w-full justify-center md:justify-start">
+        {/* BOTÃO (Centralizado ou Alinhado) */}
+        <div ref={buttonRef} className="pointer-events-auto flex w-full justify-center md:justify-start opacity-0">
           <DownloadCVButton text={translations.cvButton} />
-        </div> */}
+        </div>
       </div>
     </section>
   );
+}
+
+/**
+ * Pequeno componente helper para detectar quando o modelo 3D 
+ * dentro do Suspense foi montado, evitando que o GSAP trave.
+ */
+function SceneInit({ onReady }: { onReady: () => void }) {
+  useEffect(() => {
+    onReady();
+  }, [onReady]);
+  return null;
 }
