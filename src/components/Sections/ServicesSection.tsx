@@ -84,9 +84,9 @@ export default function ServicesSection({
     <section className="flex flex-col gap-10 px-5 pb-30 lg:px-10" id="services">
       <div className="mx-auto max-w-7xl">
         <div className="lg:flex lg:self-start">
-          <div className="h-[500px] w-[500px]">
-            <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
-              <OrbitControls />
+          <div className="h-[300px] w-full">
+            <Canvas camera={{ position: [5, 0, 10], fov: 35 }}>
+              <OrbitControls enableZoom={false} />
               <ambientLight intensity={0.5} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
               <pointLight position={[-10, -10, -10]} intensity={1} />
@@ -94,8 +94,8 @@ export default function ServicesSection({
               <Environment preset="city" />
   
             <Suspense fallback={null}>
-              <Center top position={[0, -2.0, 0]}>
-                <Computer scale={isMobile ? 2 : 8} />
+              <Center top position={[0, isMobile ? -2.0 : -2.0, 0]}>
+                <Computer scale={isMobile ? 8 : 8} />
               </Center>
               <ContactShadows 
                 position={[0, -2.5, 0]} 
