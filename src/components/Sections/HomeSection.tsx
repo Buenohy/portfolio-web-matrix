@@ -119,7 +119,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
     <section
       ref={containerRef}
       id="home"
-      className="relative h-screen w-full overflow-hidden"
+      className="relative h-screen w-full max-w-full overflow-hidden"
     >
       {/* Camada de transição preta no final da animação */}
       <div className="overlay-black pointer-events-none absolute inset-0 z-20 opacity-0" />

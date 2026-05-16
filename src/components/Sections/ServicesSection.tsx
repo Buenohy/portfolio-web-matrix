@@ -84,7 +84,7 @@ export default function ServicesSection({
     <section className="flex flex-col gap-10 px-5 pb-30 lg:px-10" id="services">
       <div className="mx-auto max-w-7xl">
         <div className="lg:flex lg:self-start">
-          <div className="h-[300px] w-full">
+          <div className="h-[300px] w-fit">
             <Canvas camera={{ position: [5, 0, 10], fov: 35 }}>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={0.5} />
