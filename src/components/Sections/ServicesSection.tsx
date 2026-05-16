@@ -13,9 +13,9 @@ import { Icon } from '@iconify/react';
 
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Center, ContactShadows, Environment, Float } from '@react-three/drei'
+import { Center, ContactShadows, Environment, Float, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
-import { Computer } from '@/components/Computer'
+import { HackersBasement } from '@/components/models/HackersBasement'
 
 interface ServiceCardData {
   id: string;
@@ -65,23 +65,19 @@ export default function ServicesSection({
     <section className="flex flex-col gap-10 px-5 pb-30 lg:px-10" id="services">
       <div className="mx-auto max-w-7xl">
         <div className="lg:flex lg:self-start">
-          <div className="h-[350px] w-[350px]">
-            <Canvas camera={{ position: [10, 0, 10], fov: 35 }}>
-            <ambientLight intensity={0.5} />
-            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
-            <pointLight position={[-10, -10, -10]} intensity={1} />
-            
-            <Environment preset="city" />
+          <div className="h-[300px] w-[300px]">
+            <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
+              <OrbitControls />
+              <ambientLight intensity={0.5} />
+              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
+              <pointLight position={[-10, -10, -10]} intensity={1} />
+              
+              <Environment preset="city" />
   
             <Suspense fallback={null}>
-              <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-                <MouseFollower>
-                  <Center top position={[0, -2.0, 0]}>
-                    <Computer scale={7} />
+              <Center top position={[0, -2.0, 0]}>
+                    <HackersBasement scale={1} />
                   </Center>
-                </MouseFollower>
-              </Float>
-              
               <ContactShadows 
                 position={[0, -2.5, 0]} 
                 opacity={0.4} 

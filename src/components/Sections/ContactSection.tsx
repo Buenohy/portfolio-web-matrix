@@ -9,7 +9,7 @@ import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Center, ContactShadows, Environment, Float } from '@react-three/drei'
 import * as THREE from 'three'
-import { PanasonicRc6088 } from '@/components/PanasonicRc6088'
+import { PanasonicRc6088Am } from '@/components/models/PanasonicRc6088Am'
 
 type ContactSectionProps = {
   translations: {
@@ -64,8 +64,8 @@ export default function ContactSection({ translations }: ContactSectionProps) {
         <Suspense fallback={null}>
           <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
             <MouseFollower>
-              <Center top position={[0, 0, 0]}>
-                <PanasonicRc6088 scale={7} />
+              <Center top position={[0, -1.0, 0]}>
+                <PanasonicRc6088Am scale={7} />
               </Center>
             </MouseFollower>
           </Float>

@@ -8,7 +8,7 @@ import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Center, ContactShadows, Environment, Float } from '@react-three/drei'
 import * as THREE from 'three'
-import { NeoShades } from '@/components/NeoShades'
+import { NeoShades } from '@/components/models/NeoShades'
 
 type AboutSectionProps = {
   translations: {

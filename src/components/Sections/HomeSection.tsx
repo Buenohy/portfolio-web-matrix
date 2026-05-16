@@ -2,9 +2,10 @@
 
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Center, ContactShadows, Environment, Float } from '@react-three/drei'
+import { Center, ContactShadows, Environment, Float, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
-import { NeoShades } from '@/components/NeoShades'
+import { NeoShades } from '@/components/models/NeoShades'
+import { WhiteRoom } from '@/components/models/WhiteRoom'
 import DownloadCVButton from '@/components/DownloadCvButton/DownloadCvButton'
 
 import gsap from 'gsap'
@@ -87,7 +88,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
       className="relative flex h-screen w-full items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
-        <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
+        {/* <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
           <pointLight position={[-10, -10, -10]} intensity={1} />
@@ -102,6 +103,32 @@ export default function HomeSection({ translations }: HomeSectionProps) {
                 </Center>
               </MouseFollower>
             </Float>
+            
+            <ContactShadows 
+              position={[0, -2.5, 0]} 
+              opacity={0.4} 
+              scale={10} 
+              blur={2} 
+              far={4.5} 
+            />
+          </Suspense>
+        </Canvas> */}
+        <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
+          <OrbitControls />
+          <ambientLight intensity={0.5} />
+          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
+          <pointLight position={[-10, -10, -10]} intensity={1} />
+          
+          <Environment preset="city" />
+
+          <Suspense fallback={null}>
+            
+              
+                <Center top position={[0, -2.0, 0]}>
+                  <WhiteRoom scale={2} />
+                </Center>
+              
+            
             
             <ContactShadows 
               position={[0, -2.5, 0]} 
