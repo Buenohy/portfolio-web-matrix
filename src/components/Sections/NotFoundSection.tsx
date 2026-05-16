@@ -30,7 +30,7 @@ export default function NotFoundClient({ translations }: NotFoundClientProps) {
 
       <div className="h-[400px] w-full">
         <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
-          <OrbitControls enableZoom={false} />
+          <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={10} />
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
           <Environment preset="city" />
