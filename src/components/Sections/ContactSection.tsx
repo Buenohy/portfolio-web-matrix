@@ -3,7 +3,6 @@
 import IconsSocialMedia from '@/components/IconsSocialMedia/IconsSocialMedia';
 import { Link } from '@/i18n/navigation';
 import { GoArrowUpRight } from 'react-icons/go';
-import YinYangIcon from '@/components/YinYangIcon/YinYangIcon';
 
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
@@ -48,12 +47,6 @@ export default function ContactSection({ translations }: ContactSectionProps) {
   return (
     <section id="contact" className="bg-main px-5 lg:px-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center py-15 text-center 2xl:py-64">
-        <span className="animate-[spin_5000ms_linear_infinite] py-10">
-          {/* <YinYangIcon
-            className="h-25 w-25 md:h-50 md:w-50"
-            aria-label="Icon Yin Yang"
-          /> */}
-        </span>
         <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
