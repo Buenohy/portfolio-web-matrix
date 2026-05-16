@@ -40,10 +40,10 @@ export default function NotFoundClient({ translations }: NotFoundClientProps) {
   }, [])
   return (
     <section className="flex min-h-screen flex-col items-center justify-center px-5 text-center">
-      <h1 className="animate-shake my-4 text-6xl font-semibold text-black dark:text-white">
+      <h1 className="animate-shake my-4 text-6xl font-semibold text-black-matrix dark:text-white-matrix">
         {translations.title}
       </h1>
-      <h2 className="my-1 text-xl font-normal text-black dark:text-white">
+      <h2 className="my-1 text-xl font-normal text-black-matrix dark:text-white-matrix">
         {translations.subTitle}
       </h2>
       <p className="my-5 text-base font-light text-[#0c1c2599] dark:text-[#fbfbff99]">
