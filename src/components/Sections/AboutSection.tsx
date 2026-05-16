@@ -86,7 +86,7 @@ export default function AboutSection({ translations }: AboutSectionProps) {
             className="mx-auto my-5 max-h-[464px] w-full max-w-[464px] rounded-2xl object-cover"
           /> */}
           <div className="relative h-[350px] md:h-[500px] w-full">
-          <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
+          <Canvas camera={{ position: [-5, 0, 10], fov: 35 }}>
             <ambientLight intensity={0.5} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
             <pointLight position={[-10, -10, -10]} intensity={1} />

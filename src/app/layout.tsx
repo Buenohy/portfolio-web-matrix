@@ -22,7 +22,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${poppins.variable}`}>
+      <body className={`${poppins.variable} selection:bg-green-terminal`}>
         <Providers>{children}</Providers>
       </body>
     </html>
