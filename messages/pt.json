@@ -34,7 +34,8 @@
     "ariaLabel": "Mudar tema de cores"
   },
   "HomeSection": {
-    "greeting": "OLÁ, SOU GABRIEL BUENO",
+    "greeting": "Olá, Eu Sou",
+    "nameCreator": "Gabriel<br></br>Bueno",
     "mainTitle": "Engenheiro de Software que constrói<br></br>interfaces de alta performance.",
     "cvButton": "Download CV",
     "avatarAriaLabel": "Ir para a seção Sobre Mim",

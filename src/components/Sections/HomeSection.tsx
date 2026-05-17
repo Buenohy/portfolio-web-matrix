@@ -17,6 +17,7 @@ gsap.registerPlugin(ScrollTrigger)
 type HomeSectionProps = {
   translations: {
     greeting: string;
+    nameCreator: string;
     mainTitle: React.ReactNode; 
     cvButton: string;
     avatarAriaLabel: string;
@@ -165,10 +166,10 @@ export default function HomeSection({ translations }: HomeSectionProps) {
           {/* LADO ESQUERDO */}
           <div ref={textLeftRef} className="max-w-md opacity-0">
             <h1 className="text-xl font-light text-green-500 tracking-tighter">
-              {translations.greeting || "Hello! I'm"}
+              {translations.greeting}
             </h1>
-            <h1 className="text-4xl font-bold text-white uppercase tracking-tighter md:text-6xl">
-              GABRIEL <br/> BUENO
+            <h1 className="text-2xl font-bold text-white uppercase tracking-tighter md:text-4xl">
+              {translations.nameCreator}
             </h1>
           </div>
 
@@ -177,7 +178,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             <h2 className="text-xl leading-tight text-green-500 font-light">
               A Full Stack
             </h2>
-            <h2 className="text-4xl font-bold leading-tight text-white uppercase md:text-6xl">
+            <h2 className="text-2xl font-bold leading-tight text-white uppercase md:text-4xl">
               Software <br/> Engineer
             </h2>
           </div>

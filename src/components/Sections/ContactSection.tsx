@@ -67,7 +67,7 @@ export default function ContactSection({ translations }: ContactSectionProps) {
     <section id="contact" className="bg-main px-5 lg:px-10">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center py-15 text-center 2xl:py-64">
         <Canvas camera={{ position: [0, 0, 10], fov: 35 }}>
-        <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={10} />
+        <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={5} />
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
         <pointLight position={[-10, -10, -10]} intensity={1} />

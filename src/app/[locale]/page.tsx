@@ -19,6 +19,7 @@ export default async function HomePage() {
 
   const homeTranslations = {
     greeting: tHome('greeting'),
+    nameCreator: tHome.rich('nameCreator', { br: () => <br /> }),
     mainTitle: tHome.rich('mainTitle', { br: () => <br /> }),
     cvButton: tHome('cvButton'),
     avatarAriaLabel: tHome('avatarAriaLabel'),
