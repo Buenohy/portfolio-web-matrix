@@ -54,7 +54,7 @@ export default function ProjectDetailsPage() {
 
   return (
     // Natural page scroll wrapper
-    <main className="container mx-auto px-5 pt-27 pb-16 md:px-10 lg:px-16">
+    <main className="container mx-auto pt-27 pb-16">
       {/* Floating Close Button */}
       <Link
         href="/portfolio"
@@ -65,7 +65,7 @@ export default function ProjectDetailsPage() {
       </Link>
 
       {/* 1. Full-Width Header */}
-      <header className="mb-10 lg:mb-16">
+      <header className="mb-4 lg:mb-8">
         <span className="text-tag-white dark:text-tag-dark text-xs font-semibold tracking-wider uppercase sm:text-sm">
           {project.tag}
         </span>
@@ -143,7 +143,7 @@ export default function ProjectDetailsPage() {
         >
           {/* Main paragraphs */}
           <div className="flex flex-col gap-6">
-            <h3 className="text-dark-black dark:text-white-pure text-lg leading-snug font-semibold sm:text-xl lg:text-2xl">
+            <h3 className="text-dark-black dark:text-white-pure text-md leading-snug font-semibold sm:text-lg lg:text-xl">
               {project.details.titleParagraph}
             </h3>
             <div className="flex flex-col gap-4">

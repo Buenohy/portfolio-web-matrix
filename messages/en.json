@@ -93,11 +93,6 @@
           ],
           "gallery": [
             {
-              "src": "/images/crypto-dashboard/crypto-dashboard-1.png",
-              "alt": "Crypto Dashboard main screen",
-              "title": "Main Dashboard"
-            },
-            {
               "src": "/images/crypto-dashboard/crypto-dashboard-2.png",
               "alt": "Crypto Dashboard portfolio screen",
               "title": "My Portfolio"
@@ -109,11 +104,6 @@
             },
             {
               "src": "/images/crypto-dashboard/crypto-dashboard-4.png",
-              "alt": "Crypto Dashboard in dark mode",
-              "title": "Dark Mode Theme"
-            },
-            {
-              "src": "/images/crypto-dashboard/crypto-dashboard-5.png",
               "alt": "Crypto Dashboard in dark mode",
               "title": "Dark Mode Theme"
             }
@@ -340,11 +330,6 @@
               "title": "Desktop View"
             },
             {
-              "src": "/images/javascript-calculator/javascript-calculator-1.png",
-              "alt": "Calculator on a mobile screen",
-              "title": "Mobile View"
-            },
-            {
               "src": "/images/javascript-calculator/javascript-calculator-2.png",
               "alt": "Calculator performing an operation",
               "title": "Calculation in Action"
@@ -396,17 +381,12 @@
               "title": "Visão Desktop"
             },
             {
-              "src": "/images/react-calculator/react-calculator-mobile-1.png",
-              "alt": "Calculadora em tela de celular",
-              "title": "Visão Mobile"
-            },
-            {
-              "src": "/images/javascript-calculator/javascript-calculator-2.png",
+              "src": "/images/react-calculator/react-calculator-2.png",
               "alt": "Calculadora realizando uma operação",
               "title": "Cálculo em Ação"
             },
             {
-              "src": "/images/javascript-calculator/javascript-calculator-3.png",
+              "src": "/images/react-calculator/react-calculator-3.png",
               "alt": "Calculadora Resultado",
               "title": "Resultado"
             }
@@ -470,26 +450,6 @@
               "src": "/images/gallery-plus/gallery-plus-4.png",
               "alt": "Calculadora Resultado",
               "title": "Resultado"
-            },
-            {
-              "src": "/images/gallery-plus/gallery-plus-mobile-5.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
-            },
-            {
-              "src": "/images/gallery-plus/gallery-plus-mobile-6.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
-            },
-            {
-              "src": "/images/gallery-plus/gallery-plus-mobile-7.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
-            },
-            {
-              "src": "/images/gallery-plus/gallery-plus-mobile-8.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
             }
           ]
         }
@@ -497,7 +457,7 @@
       "react-todo": {
         "id": 8,
         "slug": "react-todo",
-        "src": "/images/react-todo/react-todo-1.png",
+        "src": "/images/react-todo/react-todo-dark-1.png",
         "alt": "Interface da Calculadora JavaScript",
         "title": "React Todo",
         "tag": "PROJETO PESSOAL",
@@ -536,16 +496,6 @@
               "src": "/images/react-todo/react-todo-dark-1.png",
               "alt": "Calculadora em tela de desktop",
               "title": "Visão Desktop Dark"
-            },
-            {
-              "src": "/images/react-todo/react-todo-mobile-1.png",
-              "alt": "Calculadora em tela de celular",
-              "title": "Visão Mobile"
-            },
-            {
-              "src": "/images/react-todo/react-todo-mobile-dark-1.png",
-              "alt": "Calculadora realizando uma operação",
-              "title": "Cálculo em Ação"
             }
           ]
         }
