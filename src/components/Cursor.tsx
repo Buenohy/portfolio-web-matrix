@@ -15,7 +15,7 @@ export default function Cursor() {
     
     const handleMouseMove = (e: MouseEvent) => {
       points.push({ x: e.clientX, y: e.clientY })
-      if (points.length > 30) points.shift() // Quantidade de pontos no rastro
+      if (points.length > 20) points.shift() // Quantidade de pontos no rastro
     }
 
     window.addEventListener('mousemove', handleMouseMove)
