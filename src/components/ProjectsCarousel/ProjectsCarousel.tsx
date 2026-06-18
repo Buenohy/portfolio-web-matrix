@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl'; // Importação do hook de tradução
 import {
   Carousel,
   CarouselContent,
@@ -17,6 +18,7 @@ import Link from 'next/link';
 interface ProjectsCarouselProps {
   projects: Project[];
   variant?: 'home' | 'portfolio';
+  // Removido ProjectDetailsPage daqui
 }
 
 export function ProjectsCarousel({
@@ -25,6 +27,9 @@ export function ProjectsCarousel({
 }: ProjectsCarouselProps) {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+
+  // Inicialização do hook de tradução com o namespace correspondente
+  const t = useTranslations('ProjectDetailsPage');
 
   useEffect(() => {
     if (!api) return;
@@ -78,7 +83,7 @@ export function ProjectsCarousel({
                 {/* LEFT COLUMN: Content */}
                 {/* justify-start on mobile to avoid stretching, justify-between on desktop */}
                 <div className="flex w-full flex-1 flex-col justify-start gap-6 lg:justify-between lg:gap-0">
-                  {/* Top section: Title and Description with refined typography sizes */}
+                  {/* Top section: Title and Description */}
                   <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
                     <h2 className="text-xl leading-[1.15] font-bold tracking-tight text-white sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-6xl">
                       {project.title}
@@ -91,7 +96,7 @@ export function ProjectsCarousel({
                   {/* Bottom section: Tools & Features */}
                   <div className="flex flex-col gap-3 sm:gap-4">
                     <h4 className="text-[10px] font-semibold tracking-[0.2em] text-gray-500 uppercase sm:text-xs 2xl:text-sm">
-                      Tools & Features
+                      {t('stacksAndToolsTitle')}
                     </h4>
                     <div className="flex flex-wrap gap-2 sm:gap-2.5">
                       {project.badges?.map((badge, idx) => (
