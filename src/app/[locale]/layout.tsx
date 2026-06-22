@@ -8,6 +8,7 @@ import Footer from '@/components/Footer/Footer';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { AppTransitionProvider } from '@/components/AppTransitionProvider/AppTransitionProvider';
 
 export async function generateMetadata({
   params,
@@ -37,10 +38,16 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider>
       <HeaderVisibilityProvider>
-        <Header />
-        <main>{children}</main>
-        <MenuBar />
-        <Footer />
+        {/* 
+          Placed inside NextIntlClientProvider so the loading screen 
+          can correctly fetch translation keys.
+        */}
+        <AppTransitionProvider>
+          <Header />
+          <main>{children}</main>
+          <MenuBar />
+          <Footer />
+        </AppTransitionProvider>
       </HeaderVisibilityProvider>
     </NextIntlClientProvider>
   );

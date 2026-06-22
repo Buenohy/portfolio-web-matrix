@@ -1,6 +1,6 @@
 import './globals.css';
 import { Poppins } from 'next/font/google';
-import { Providers } from './providers';
+import { ThemeProviders } from './providers';
 import { setRequestLocale } from 'next-intl/server';
 import Cursor from '@/components/Cursor';
 import { MatrixRain } from '@/components/MatrixRain/MatrixRain';
@@ -24,10 +24,13 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${poppins.variable} selection:bg-green-terminal`}>
+      <body
+        className={`${poppins.variable} selection:bg-green-terminal bg-black text-white antialiased`}
+      >
         <MatrixRain speed={80} />
         <Cursor />
-        <Providers>{children}</Providers>
+
+        <ThemeProviders>{children}</ThemeProviders>
       </body>
     </html>
   );
