@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import { Providers } from './providers';
 import { setRequestLocale } from 'next-intl/server';
 import Cursor from '@/components/Cursor';
+import { MatrixRain } from '@/components/MatrixRain/MatrixRain';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${poppins.variable} selection:bg-green-terminal`}>
+        <MatrixRain speed={80} />
         <Cursor />
         <Providers>{children}</Providers>
       </body>

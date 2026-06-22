@@ -38,7 +38,7 @@ const MenuItemContent: FC<{ item: NavItem }> = ({ item }) => {
 export default function Header() {
   const pathname = usePathname();
   const { isVisible, showAndUnlockHeader } = useHeaderVisibility();
-  
+
   const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
@@ -65,9 +65,12 @@ export default function Header() {
     return () => observer.disconnect();
   }, [pathname]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
     e.preventDefault();
-    
+
     setActiveSection(id);
     showAndUnlockHeader();
 
@@ -97,14 +100,15 @@ export default function Header() {
     >
       <div className="bg-white-pure dark:bg-dark-black border-gray-port dark:border-shadow-white-pure shadow-dark-black/2.5 dark:shadow-white-pure/2.5 mx-auto w-full max-w-7xl items-center rounded-xl border text-white shadow-xl">
         <div className="relative flex w-full items-center justify-between">
-          
           <div className="flex items-center justify-start gap-2 p-2">
             <NextIntlLink href="/">
-              <Image 
+              <Image
                 src={MatrixLogo}
-                width={100} 
-                height={100} 
-                alt='Matrix Logo' 
+                width={100}
+                height={100}
+                alt="Matrix Logo"
+                style={{ width: 'auto', height: 'auto' }}
+                priority
               />
             </NextIntlLink>
           </div>
@@ -119,7 +123,9 @@ export default function Header() {
                       <a
                         href={`#${item.id}`}
                         onClick={(e) => handleNavClick(e, item.id)}
-                        className={clsx('group cursor-pointer', { 'active': activeSection === item.id })}
+                        className={clsx('group cursor-pointer', {
+                          active: activeSection === item.id,
+                        })}
                       >
                         <MenuItemContent item={item} />
                       </a>
@@ -141,7 +147,6 @@ export default function Header() {
             <DarkMode />
             <MenuLang />
           </div>
-
         </div>
       </div>
     </header>
