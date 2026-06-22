@@ -1,47 +1,73 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface MatrixRainProps {
-  color?: string; // Character color (default: Matrix green)
   fontSize?: number; // Font size (default: 14)
   speed?: number; // Animation speed (time in ms, default: 33ms)
 }
 
 export const MatrixRain: React.FC<MatrixRainProps> = ({
-  color = '#00FF41',
   fontSize = 14,
   speed = 33,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  // Defer mounting to avoid SSR hydration mismatches
+  useEffect(() => {
+    const handle = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(handle);
+  }, []);
 
   useEffect(() => {
+    if (!mounted) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Adjust canvas size to fit the entire window
+    // Helper to check if dark mode is active on the document
+    const checkIsDark = () =>
+      document.documentElement.classList.contains('dark');
+
+    // Helper to clear and repaint canvas with a solid color on theme switch or resize
+    const clearCanvasBuffer = () => {
+      ctx.fillStyle = checkIsDark() ? '#000000' : '#e6ffe6';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    };
+
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      clearCanvasBuffer();
     };
 
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    // Matrix-inspired characters (Japanese Katakana, alphabet, and numbers)
+    // Clear buffer initially
+    clearCanvasBuffer();
+
+    // MutationObserver to listen for Tailwind's dark class changes on the <html> element
+    const observer = new MutationObserver(() => {
+      clearCanvasBuffer();
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
     const katakana = 'ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ';
     const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const nums = '0123456789';
     const alphabet = (katakana + latin + nums).split('');
 
-    // Determine the number of columns based on screen width
     let columns = Math.floor(canvas.width / fontSize);
     let rainDrops: number[] = [];
 
-    // Initialize the Y position for each column (all starting at the top)
     const initDrops = () => {
       columns = Math.floor(canvas.width / fontSize);
       rainDrops = [];
@@ -52,49 +78,50 @@ export const MatrixRain: React.FC<MatrixRainProps> = ({
 
     initDrops();
 
-    // Drawing function that runs repeatedly
     const draw = () => {
-      // Create a trail effect by rendering a semi-transparent black background
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      // Dynamic evaluation inside the frame loop to match Tailwind's state
+      const isDarkActive = checkIsDark();
+      const currentFadeColor = isDarkActive
+        ? 'rgba(0, 0, 0, 0.05)'
+        : 'rgba(230, 255, 230, 0.05)';
+      const currentTextColor = isDarkActive ? '#00FF41' : '#008f11';
+
+      ctx.fillStyle = currentFadeColor;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = color;
+      ctx.fillStyle = currentTextColor;
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < rainDrops.length; i++) {
-        // Select a random character
         const text = alphabet[Math.floor(Math.random() * alphabet.length)];
-
-        // Draw the character
         const x = i * fontSize;
         const y = rainDrops[i] * fontSize;
         ctx.fillText(text, x, y);
 
-        // Reset drop to the top after leaving the screen, with a slight random delay
         if (y > canvas.height && Math.random() > 0.975) {
           rainDrops[i] = 0;
         }
-
-        // Move the drop down the screen
         rainDrops[i]++;
       }
     };
 
-    // Animation loop
     const interval = setInterval(draw, speed);
 
-    // Cleanup when the component unmounts
     return () => {
       clearInterval(interval);
+      observer.disconnect();
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [color, fontSize, speed]);
+  }, [mounted, fontSize, speed]);
+
+  if (!mounted) {
+    return <div className="fixed inset-0 -z-10 bg-black" />;
+  }
 
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 -z-10 block"
-      style={{ background: '#000' }}
+      className="bg-white-matrix pointer-events-none fixed inset-0 -z-10 block transition-colors duration-500 dark:bg-black"
     />
   );
 };

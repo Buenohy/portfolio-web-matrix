@@ -65,7 +65,7 @@ export default function ProjectDetailsPage() {
       </Link>
 
       {/* 1. Full-Width Header */}
-      <header className="mb-4 lg:mb-8">
+      <header className="mx-4 mb-4 lg:mb-8">
         <span className="text-tag-white dark:text-tag-dark text-xs font-semibold tracking-wider uppercase sm:text-sm">
           {project.tag}
         </span>
@@ -84,7 +84,7 @@ export default function ProjectDetailsPage() {
       </header>
 
       {/* 2. Interactive Split Columns */}
-      <article className="grid grid-cols-1 gap-12 lg:grid-cols-12 xl:gap-16">
+      <article className="mx-4 grid grid-cols-1 gap-12 lg:grid-cols-12 xl:gap-16">
         {/* Left Column: Interactive Image Gallery Switcher */}
         <section
           aria-label={t('gallerySectionAriaLabel')}
