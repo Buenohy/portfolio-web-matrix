@@ -54,10 +54,10 @@ export default async function PortfolioPage({
     <main>
       <section className="px-5 pt-45 pb-10 lg:px-10">
         <div className="text-center">
-          <h1 className="my-1 text-6xl font-semibold dark:text-white">
+          <h1 className="text-black-matrix dark:text-white-matrix my-1 text-6xl font-semibold">
             {tPortfolio('title')}
           </h1>
-          <p className="my-5 text-center text-xl font-light text-black lg:text-left dark:text-white">
+          <p className="text-black-matrix dark:text-white-matrix my-5 text-center text-xl font-light lg:text-left">
             {tPortfolio.rich('description', {
               br: () => <br />,
             })}

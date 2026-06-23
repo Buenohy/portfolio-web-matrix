@@ -61,7 +61,7 @@ export function ProjectCard({ project, href }: ProjectCardProps) {
         {/* Underlined Action Link with react-icon and mobile touch-active states */}
         <Link
           href={href}
-          className="text-dark-black dark:text-white-pure hover:text-main dark:hover:text-main active:text-main dark:active:text-main mt-2 flex items-center gap-1.5 text-sm font-semibold underline underline-offset-4 transition-colors duration-150"
+          className="text-black-matrix dark:text-white-pure hover:text-main dark:hover:text-main active:text-main dark:active:text-main mt-2 flex items-center gap-1.5 text-sm font-semibold underline underline-offset-4 transition-colors duration-150"
         >
           Ver resultado <FiArrowRight className="text-base" />
         </Link>
