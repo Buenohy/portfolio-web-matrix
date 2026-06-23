@@ -85,7 +85,7 @@ export function ProjectsCarousel({
                 <div className="flex w-full flex-1 flex-col justify-start gap-6 lg:justify-between lg:gap-0">
                   {/* Top section: Title and Description */}
                   <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                    <h2 className="text-xl leading-[1.15] font-bold tracking-tight text-white sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-6xl">
+                    <h2 className="text-black-matrix dark:text-white-matrix text-xl leading-[1.15] font-bold tracking-tight sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-6xl">
                       {project.title}
                     </h2>
                     <p className="max-w-xl text-xs leading-relaxed text-gray-400 sm:text-sm md:text-base lg:text-sm xl:text-base 2xl:text-lg">
@@ -102,7 +102,7 @@ export function ProjectsCarousel({
                       {project.badges?.map((badge, idx) => (
                         <span
                           key={idx}
-                          className="border-main rounded-lg border bg-transparent px-2 py-0.5 text-[10px] font-medium text-gray-200 sm:px-2.5 sm:py-1 sm:text-xs 2xl:px-3.5 2xl:py-1.5 2xl:text-sm"
+                          className="border-main text-black-matrix rounded-lg border bg-transparent px-2 py-0.5 text-[10px] font-medium sm:px-2.5 sm:py-1 sm:text-xs 2xl:px-3.5 2xl:py-1.5 2xl:text-sm dark:text-gray-200"
                         >
                           {badge}
                         </span>
