@@ -354,7 +354,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             */}
             <h1
               ref={typingGreetingRef}
-              className="text-green-matrix min-h-[28px] text-xl font-light tracking-tighter"
+              className="text-green-terminal dark:text-green-matrix min-h-[28px] text-xl font-light tracking-tighter"
             >
               {translations.greeting}
             </h1>
@@ -366,7 +366,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             */}
             <h1
               ref={typingNameRef}
-              className="text-white-matrix mt-1 min-h-[36px] text-2xl font-bold tracking-tighter uppercase md:min-h-[48px] md:text-4xl"
+              className="text-black-matrix dark:text-white-matrix mt-1 min-h-[36px] text-2xl font-bold tracking-tighter uppercase md:min-h-[48px] md:text-4xl"
             >
               {translations.nameCreator}
             </h1>
@@ -384,7 +384,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             */}
             <h2
               ref={typingRoleRef}
-              className="text-green-matrix min-h-[28px] text-xl leading-tight font-light"
+              className="text-green-terminal dark:text-green-matrix min-h-[28px] text-xl leading-tight font-light"
             >
               A Full Stack
             </h2>
@@ -398,7 +398,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             */}
             <h2
               ref={typingTitleRef}
-              className="text-white-matrix mt-1 min-h-[60px] text-2xl leading-tight font-bold whitespace-pre-line uppercase md:min-h-[80px] md:text-4xl"
+              className="text-black-matrix dark:text-white-matrix mt-1 min-h-[60px] text-2xl leading-tight font-bold whitespace-pre-line uppercase md:min-h-[80px] md:text-4xl"
             >
               {'Software\nEngineer'}
             </h2>
