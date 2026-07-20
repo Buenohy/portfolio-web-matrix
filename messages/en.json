@@ -4,7 +4,7 @@
     "description": "Software Engineer specializing in building high-performance user interfaces with React, Next.js, and TypeScript. Explore projects focused on optimization, SEO, and user experience."
   },
   "LoadingScreen": {
-    "systemLoading": "LOADING_SYSTEM",
+    "systemLoading": "LOADING THE MATRIX",
     "resources": "Loading 3D assets"
   },
   "Header": {

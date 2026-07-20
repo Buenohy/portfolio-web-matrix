@@ -4,7 +4,7 @@
     "description": "Engenheiro de Software especialista em criar interfaces de alta performance com React, Next.js e TypeScript. Explore projetos focados em otimização, SEO e experiência do usuário."
   },
   "LoadingScreen": {
-    "systemLoading": "LOADING_SYSTEM",
+    "systemLoading": "CARREGANDO A MATRIX",
     "resources": "Carregando recursos 3D"
   },
   "Header": {
