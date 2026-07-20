@@ -50,7 +50,8 @@
     "viewMoreButton": "View All Projects"
   },
   "ProjectsCarousel": {
-    "seeMoreButton": "See More"
+    "seeMoreButton": "See More",
+    "viewProject": "View Project"
   },
   "ProjectDetailsPage": {
     "closeButtonAriaLabel": "Close and return to portfolio",
@@ -66,6 +67,7 @@
         "alt": "Crypto Dashboard Interface",
         "title": "Real-Time Cryptocurrency Dashboard",
         "tag": "PERSONAL PROJECT",
+        "viewProject": "View Project",
         "badges": [
           "WEB APPLICATION",
           "DATA VISUALIZATION",
@@ -121,6 +123,7 @@
         "alt": "Professional Portfolio Interface",
         "title": "High-Performance Personal Portfolio with Next.js",
         "tag": "PERSONAL PROJECT",
+        "viewProject": "View Project",
         "badges": ["WEB APPLICATION", "SEO", "SSR", "UI/UX"],
         "description": "I developed my professional portfolio with Next.js and TypeScript, focusing on performance, SEO optimization via SSR, and an interactive user experience with project filtering and Dark Mode.",
         "details": {
@@ -196,6 +199,7 @@
         "alt": "Code Connect authentication interface",
         "title": "SPA Authentication System with Social Login",
         "tag": "CODE CONNECT",
+        "viewProject": "View Project",
         "badges": ["WEB APPLICATION", "AUTHENTICATION", "SECURITY", "UX"],
         "description": "I developed a complete authentication system as a Single-Page Application (SPA), focusing on a streamlined user experience with social login and fluid navigation.",
         "details": {
@@ -250,6 +254,7 @@
         "alt": "Interface of the Bueno Books platform",
         "title": "Book Discovery Platform with React",
         "tag": "WEB PROJECT",
+        "viewProject": "View Project",
         "badges": [
           "WEB APPLICATION",
           "API INTEGRATION",
@@ -304,6 +309,7 @@
         "alt": "JavaScript Calculator Interface",
         "title": "Responsive Calculator with Vanilla JavaScript",
         "tag": "PERSONAL PROJECT",
+        "viewProject": "View Project",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "I developed a fully functional web calculator using vanilla JavaScript, creating a custom calculation engine that parses complex mathematical expressions and a responsive interface for a seamless experience on any device.",
         "details": {
@@ -353,6 +359,7 @@
         "alt": "Interface da Calculadora JavaScript",
         "title": "Calculadora React",
         "tag": "PROJETO PESSOAL",
+        "viewProject": "View Project",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
         "details": {
@@ -404,6 +411,7 @@
         "alt": "Interface da Calculadora JavaScript",
         "title": "Gallery Plus",
         "tag": "PROJETO PESSOAL",
+        "viewProject": "View Project",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
         "details": {
@@ -465,6 +473,7 @@
         "alt": "Interface da Calculadora JavaScript",
         "title": "React Todo",
         "tag": "PROJETO PESSOAL",
+        "viewProject": "View Project",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
         "details": {

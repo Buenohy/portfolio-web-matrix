@@ -15,7 +15,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, href }: ProjectCardProps) {
-  const { src, alt, title, description, badges } = project;
+  const { src, alt, title, description, badges, viewProject } = project;
 
   return (
     // Unified Card layout to match reference proportions
@@ -63,7 +63,7 @@ export function ProjectCard({ project, href }: ProjectCardProps) {
           href={href}
           className="text-black-matrix dark:text-white-pure hover:text-main dark:hover:text-main active:text-main dark:active:text-main mt-2 flex items-center gap-1.5 text-sm font-semibold underline underline-offset-4 transition-colors duration-150"
         >
-          Ver resultado <FiArrowRight className="text-base" />
+          {viewProject} <FiArrowRight className="text-base" />
         </Link>
       </CardContent>
     </Card>
