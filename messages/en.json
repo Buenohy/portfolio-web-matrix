@@ -60,65 +60,8 @@
     "seeMoreButton": "View Project Online",
     "gallerySectionAriaLabel": "Project image gallery",
     "projects": {
-      "crypto-dashboard": {
-        "id": 1,
-        "slug": "crypto-dashboard",
-        "src": "/images/crypto-dashboard/crypto-dashboard-2.png",
-        "alt": "Crypto Dashboard Interface",
-        "title": "Real-Time Cryptocurrency Dashboard",
-        "tag": "PERSONAL PROJECT",
-        "viewProject": "View Project",
-        "projectUrl": "https://bueno-crypto-dashboard.vercel.app/",
-        "badges": [
-          "WEB APPLICATION",
-          "DATA VISUALIZATION",
-          "FINTECH",
-          "SIDE PROJECT"
-        ],
-        "description": "I developed a comprehensive dashboard for cryptocurrency tracking and portfolio management, focusing on high performance and real-time data delivery using Next.js and the CoinGecko API.",
-        "details": {
-          "titleParagraph": "As a Software Engineer, I focused on delivering a high-performance and visually intuitive user experience:",
-          "strongParagraphs": [
-            {
-              "title": "Performance and Real-Time Data",
-              "text": "I optimized the application's performance by integrating the CoinGecko API with Server-Side Rendering (SSR) via Next.js, resulting in a 70% reduction in initial load time and ensuring up-to-the-minute market data."
-            },
-            {
-              "title": "Type-Safe Portfolio Management",
-              "text": "I built the 'My Portfolio' feature from scratch, allowing users to track their asset performance. The use of TypeScript ensured the integrity and security of all financial data handled by the application."
-            },
-            {
-              "title": "Modern & Responsive UI/UX",
-              "text": "I crafted a modern and fully responsive interface using Tailwind CSS and Shadcn UI, implementing interactive charts and a Dark Mode theme for a functional and visually appealing user experience (UX)."
-            }
-          ],
-          "stacks": [
-            { "nameStack": "Next.js", "iconStack": "devicon:nextjs" },
-            { "nameStack": "React", "iconStack": "devicon:react" },
-            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
-            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" }
-          ],
-          "gallery": [
-            {
-              "src": "/images/crypto-dashboard/crypto-dashboard-2.png",
-              "alt": "Crypto Dashboard portfolio screen",
-              "title": "My Portfolio"
-            },
-            {
-              "src": "/images/crypto-dashboard/crypto-dashboard-3.png",
-              "alt": "Crypto Dashboard in dark mode",
-              "title": "Dark Mode Theme"
-            },
-            {
-              "src": "/images/crypto-dashboard/crypto-dashboard-4.png",
-              "alt": "Crypto Dashboard in dark mode",
-              "title": "Dark Mode Theme"
-            }
-          ]
-        }
-      },
       "professional-portfolio": {
-        "id": 2,
+        "id": 1,
         "slug": "professional-portfolio",
         "src": "/images/portfolio-web/portfolio-web-8.png",
         "alt": "Professional Portfolio Interface",
@@ -194,224 +137,8 @@
           ]
         }
       },
-      "code-connect-auth": {
-        "id": 3,
-        "slug": "code-connect-auth",
-        "src": "/images/code-connect/code-connect-4.png",
-        "alt": "Code Connect authentication interface",
-        "title": "SPA Authentication System with Social Login",
-        "tag": "CODE CONNECT",
-        "viewProject": "View Project",
-        "projectUrl": "https://bueno-code-connect.vercel.app/",
-        "badges": ["WEB APPLICATION", "AUTHENTICATION", "SECURITY", "UX"],
-        "description": "I developed a complete authentication system as a Single-Page Application (SPA), focusing on a streamlined user experience with social login and fluid navigation.",
-        "details": {
-          "titleParagraph": "My responsibility was to create a robust and intuitive authentication flow, from the user interface to the navigation logic:",
-          "strongParagraphs": [
-            {
-              "title": "Streamlined Social Login",
-              "text": "I implemented a secure authentication system featuring OAuth providers like Google and GitHub, simplifying the sign-up process to enhance the new user experience."
-            },
-            {
-              "title": "Fluid SPA Navigation",
-              "text": "I developed the entire login and registration flow as a Single-Page Application (SPA) using React Router DOM, ensuring instant transitions between routes without page reloads."
-            },
-            {
-              "title": "Responsive UI & Real-Time Validation",
-              "text": "I built a modern interface with Tailwind CSS and implemented client-side form validation, providing users with immediate feedback for a frictionless sign-up experience."
-            }
-          ],
-          "stacks": [
-            { "nameStack": "React", "iconStack": "devicon:react" },
-            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
-            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" }
-          ],
-          "gallery": [
-            {
-              "src": "/images/code-connect/code-connect-1.png",
-              "alt": "Code Connect Login Screen",
-              "title": "Login Screen"
-            },
-            {
-              "src": "/images/code-connect/code-connect-2.png",
-              "alt": "Registration Form",
-              "title": "Registration Screen"
-            },
-            {
-              "src": "/images/code-connect/code-connect-3.png",
-              "alt": "Social login options",
-              "title": "Social Login"
-            },
-            {
-              "src": "/images/code-connect/code-connect-4.png",
-              "alt": "Desktop Vision",
-              "title": "Desktop Vision"
-            }
-          ]
-        }
-      },
-      "bueno-books": {
-        "id": 4,
-        "slug": "bueno-books",
-        "src": "/images/bueno-books/bueno-books-1.png",
-        "alt": "Interface of the Bueno Books platform",
-        "title": "Book Discovery Platform with React",
-        "tag": "WEB PROJECT",
-        "viewProject": "View Project",
-        "projectUrl": "https://bueno-books.vercel.app/",
-        "badges": [
-          "WEB APPLICATION",
-          "API INTEGRATION",
-          "UI/UX",
-          "COMPONENT-BASED"
-        ],
-        "description": "I developed Bueno Books, a book discovery platform featuring real-time search, built on a reusable component architecture with React and Tailwind CSS to ensure scalability.",
-        "details": {
-          "titleParagraph": "As a Software Engineer, I focused on creating an interactive and scalable user experience, from data fetching to visual presentation:",
-          "strongParagraphs": [
-            {
-              "title": "Real-Time Dynamic Search",
-              "text": "I implemented a search feature that filters and displays results from a book API instantly, using React component state to manage the query and update the UI without delay."
-            },
-            {
-              "title": "Scalable Component Architecture",
-              "text": "I architected the UI with reusable components (like Header and BookCard) in React and utilized Tailwind CSS for rapid, consistent styling, ensuring clean, maintainable, and scalable code."
-            },
-            {
-              "title": "Engaging Dynamic Content",
-              "text": "I created dynamic sections such as 'Latest Releases' and 'Suggestions' by consuming multiple API endpoints to enrich the platform and encourage user discovery of new titles."
-            }
-          ],
-          "stacks": [
-            { "nameStack": "React", "iconStack": "devicon:react" },
-            { "nameStack": "JavaScript", "iconStack": "devicon:javascript" },
-            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" }
-          ],
-          "gallery": [
-            {
-              "src": "/images/bueno-books/bueno-books-1.png",
-              "alt": "Real-time book search on Bueno Books",
-              "title": "Real-Time Search"
-            },
-            {
-              "src": "/images/bueno-books/bueno-books-2.png",
-              "alt": "Bueno Books homepage with latest releases",
-              "title": "Main Page"
-            },
-            {
-              "src": "/images/bueno-books/bueno-books-2.png",
-              "alt": "Example of reusable UI components",
-              "title": "Reusable Components"
-            }
-          ]
-        }
-      },
-      "javascript-calculator": {
-        "id": 5,
-        "slug": "javascript-calculator",
-        "src": "/images/javascript-calculator/javascript-calculator-1.png",
-        "alt": "JavaScript Calculator Interface",
-        "title": "Responsive Calculator with Vanilla JavaScript",
-        "tag": "PERSONAL PROJECT",
-        "viewProject": "View Project",
-        "projectUrl": "https://bueno-javascript-calculator.vercel.app/",
-        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
-        "description": "I developed a fully functional web calculator using vanilla JavaScript, creating a custom calculation engine that parses complex mathematical expressions and a responsive interface for a seamless experience on any device.",
-        "details": {
-          "titleParagraph": "As a Software Engineer, I focused on building a robust and efficient application from scratch without relying on frameworks:",
-          "strongParagraphs": [
-            {
-              "title": "Intelligent Calculation Engine",
-              "text": "I developed the calculation engine from the ground up in pure JavaScript, implementing an algorithm that parses and evaluates mathematical expressions while respecting the order of operations (PEMDAS) and parentheses."
-            },
-            {
-              "title": "Responsive UI with HTML/CSS",
-              "text": "I built a modern and fully responsive user interface with semantic HTML5 and CSS Grid, ensuring an intuitive and consistent user experience across desktops, tablets, and mobile devices."
-            },
-            {
-              "title": "Framework-Free State Management",
-              "text": "I created a state management system in vanilla JavaScript to handle user input, pending operations, and result display, efficiently manipulating the DOM without any external library dependencies."
-            }
-          ],
-          "stacks": [
-            { "nameStack": "JavaScript", "iconStack": "devicon:javascript" },
-            { "nameStack": "HTML5", "iconStack": "devicon:html5" },
-            { "nameStack": "CSS3", "iconStack": "devicon:css3" }
-          ],
-          "gallery": [
-            {
-              "src": "/images/javascript-calculator/javascript-calculator-1.png",
-              "alt": "Calculator on a desktop screen",
-              "title": "Desktop View"
-            },
-            {
-              "src": "/images/javascript-calculator/javascript-calculator-2.png",
-              "alt": "Calculator performing an operation",
-              "title": "Calculation in Action"
-            },
-            {
-              "src": "/images/javascript-calculator/javascript-calculator-3.png",
-              "alt": "Calculator Result",
-              "title": "Result"
-            }
-          ]
-        }
-      },
-      "react-calculator": {
-        "id": 6,
-        "slug": "react-calculator",
-        "src": "/images/react-calculator/react-calculator-1.png",
-        "alt": "Interface da Calculadora JavaScript",
-        "title": "Calculadora React",
-        "tag": "PROJETO PESSOAL",
-        "viewProject": "View Project",
-        "projectUrl": "https://bueno-calculator-react.vercel.app/",
-        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
-        "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
-        "details": {
-          "titleParagraph": "Como Engenheiro de Software, foquei em construir uma aplicação robusta e eficiente do zero, sem o uso de frameworks:",
-          "strongParagraphs": [
-            {
-              "title": "Motor de Cálculo Inteligente",
-              "text": "Desenvolvi o motor de cálculo do zero em JavaScript puro, implementando um algoritmo que analisa e avalia expressões matemáticas, respeitando a ordem de operações (PEMDAS) e o uso de parênteses."
-            },
-            {
-              "title": "Interface Responsiva com HTML/CSS",
-              "text": "Construí uma interface de usuário moderna e totalmente responsiva com HTML5 semântico e CSS Grid, garantindo uma experiência de uso intuitiva e consistente em desktops, tablets e dispositivos móveis."
-            },
-            {
-              "title": "Gerenciamento de Estado sem Frameworks",
-              "text": "Criei um sistema de gerenciamento de estado em JavaScript puro para controlar a entrada do usuário, as operações pendentes e a exibição do resultado, manipulando o DOM de forma eficiente sem depender de bibliotecas externas."
-            }
-          ],
-          "stacks": [
-            { "nameStack": "React", "iconStack": "devicon:react" },
-            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
-            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" },
-            { "nameStack": "React Router", "iconStack": "devicon:reactrouter" },
-            { "nameStack": "Vite", "iconStack": "devicon:vitejs" }
-          ],
-          "gallery": [
-            {
-              "src": "/images/react-calculator/react-calculator-1.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop"
-            },
-            {
-              "src": "/images/react-calculator/react-calculator-2.png",
-              "alt": "Calculadora realizando uma operação",
-              "title": "Cálculo em Ação"
-            },
-            {
-              "src": "/images/react-calculator/react-calculator-3.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
-            }
-          ]
-        }
-      },
       "gallery-plus": {
-        "id": 7,
+        "id": 2,
         "slug": "gallery-plus",
         "src": "/images/gallery-plus/gallery-plus-1.png",
         "alt": "Interface da Calculadora JavaScript",
@@ -474,7 +201,7 @@
         }
       },
       "react-todo": {
-        "id": 8,
+        "id": 3,
         "slug": "react-todo",
         "src": "/images/react-todo/react-todo-dark-1.png",
         "alt": "Interface da Calculadora JavaScript",
@@ -517,6 +244,279 @@
               "src": "/images/react-todo/react-todo-dark-1.png",
               "alt": "Calculadora em tela de desktop",
               "title": "Visão Desktop Dark"
+            }
+          ]
+        }
+      },
+      "react-calculator": {
+        "id": 4,
+        "slug": "react-calculator",
+        "src": "/images/react-calculator/react-calculator-1.png",
+        "alt": "Interface da Calculadora JavaScript",
+        "title": "Calculadora React",
+        "tag": "PROJETO PESSOAL",
+        "viewProject": "View Project",
+        "projectUrl": "https://bueno-calculator-react.vercel.app/",
+        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
+        "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
+        "details": {
+          "titleParagraph": "Como Engenheiro de Software, foquei em construir uma aplicação robusta e eficiente do zero, sem o uso de frameworks:",
+          "strongParagraphs": [
+            {
+              "title": "Motor de Cálculo Inteligente",
+              "text": "Desenvolvi o motor de cálculo do zero em JavaScript puro, implementando um algoritmo que analisa e avalia expressões matemáticas, respeitando a ordem de operações (PEMDAS) e o uso de parênteses."
+            },
+            {
+              "title": "Interface Responsiva com HTML/CSS",
+              "text": "Construí uma interface de usuário moderna e totalmente responsiva com HTML5 semântico e CSS Grid, garantindo uma experiência de uso intuitiva e consistente em desktops, tablets e dispositivos móveis."
+            },
+            {
+              "title": "Gerenciamento de Estado sem Frameworks",
+              "text": "Criei um sistema de gerenciamento de estado em JavaScript puro para controlar a entrada do usuário, as operações pendentes e a exibição do resultado, manipulando o DOM de forma eficiente sem depender de bibliotecas externas."
+            }
+          ],
+          "stacks": [
+            { "nameStack": "React", "iconStack": "devicon:react" },
+            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
+            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" },
+            { "nameStack": "React Router", "iconStack": "devicon:reactrouter" },
+            { "nameStack": "Vite", "iconStack": "devicon:vitejs" }
+          ],
+          "gallery": [
+            {
+              "src": "/images/react-calculator/react-calculator-1.png",
+              "alt": "Calculadora em tela de desktop",
+              "title": "Visão Desktop"
+            },
+            {
+              "src": "/images/react-calculator/react-calculator-2.png",
+              "alt": "Calculadora realizando uma operação",
+              "title": "Cálculo em Ação"
+            },
+            {
+              "src": "/images/react-calculator/react-calculator-3.png",
+              "alt": "Calculadora Resultado",
+              "title": "Resultado"
+            }
+          ]
+        }
+      },
+      "javascript-calculator": {
+        "id": 5,
+        "slug": "javascript-calculator",
+        "src": "/images/javascript-calculator/javascript-calculator-1.png",
+        "alt": "JavaScript Calculator Interface",
+        "title": "Responsive Calculator with Vanilla JavaScript",
+        "tag": "PERSONAL PROJECT",
+        "viewProject": "View Project",
+        "projectUrl": "https://bueno-javascript-calculator.vercel.app/",
+        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
+        "description": "I developed a fully functional web calculator using vanilla JavaScript, creating a custom calculation engine that parses complex mathematical expressions and a responsive interface for a seamless experience on any device.",
+        "details": {
+          "titleParagraph": "As a Software Engineer, I focused on building a robust and efficient application from scratch without relying on frameworks:",
+          "strongParagraphs": [
+            {
+              "title": "Intelligent Calculation Engine",
+              "text": "I developed the calculation engine from the ground up in pure JavaScript, implementing an algorithm that parses and evaluates mathematical expressions while respecting the order of operations (PEMDAS) and parentheses."
+            },
+            {
+              "title": "Responsive UI with HTML/CSS",
+              "text": "I built a modern and fully responsive user interface with semantic HTML5 and CSS Grid, ensuring an intuitive and consistent user experience across desktops, tablets, and mobile devices."
+            },
+            {
+              "title": "Framework-Free State Management",
+              "text": "I created a state management system in vanilla JavaScript to handle user input, pending operations, and result display, efficiently manipulating the DOM without any external library dependencies."
+            }
+          ],
+          "stacks": [
+            { "nameStack": "JavaScript", "iconStack": "devicon:javascript" },
+            { "nameStack": "HTML5", "iconStack": "devicon:html5" },
+            { "nameStack": "CSS3", "iconStack": "devicon:css3" }
+          ],
+          "gallery": [
+            {
+              "src": "/images/javascript-calculator/javascript-calculator-1.png",
+              "alt": "Calculator on a desktop screen",
+              "title": "Desktop View"
+            },
+            {
+              "src": "/images/javascript-calculator/javascript-calculator-2.png",
+              "alt": "Calculator performing an operation",
+              "title": "Calculation in Action"
+            },
+            {
+              "src": "/images/javascript-calculator/javascript-calculator-3.png",
+              "alt": "Calculator Result",
+              "title": "Result"
+            }
+          ]
+        }
+      },
+      "crypto-dashboard": {
+        "id": 6,
+        "slug": "crypto-dashboard",
+        "src": "/images/crypto-dashboard/crypto-dashboard-2.png",
+        "alt": "Crypto Dashboard Interface",
+        "title": "Real-Time Cryptocurrency Dashboard",
+        "tag": "PERSONAL PROJECT",
+        "viewProject": "View Project",
+        "projectUrl": "https://bueno-crypto-dashboard.vercel.app/",
+        "badges": [
+          "WEB APPLICATION",
+          "DATA VISUALIZATION",
+          "FINTECH",
+          "SIDE PROJECT"
+        ],
+        "description": "I developed a comprehensive dashboard for cryptocurrency tracking and portfolio management, focusing on high performance and real-time data delivery using Next.js and the CoinGecko API.",
+        "details": {
+          "titleParagraph": "As a Software Engineer, I focused on delivering a high-performance and visually intuitive user experience:",
+          "strongParagraphs": [
+            {
+              "title": "Performance and Real-Time Data",
+              "text": "I optimized the application's performance by integrating the CoinGecko API with Server-Side Rendering (SSR) via Next.js, resulting in a 70% reduction in initial load time and ensuring up-to-the-minute market data."
+            },
+            {
+              "title": "Type-Safe Portfolio Management",
+              "text": "I built the 'My Portfolio' feature from scratch, allowing users to track their asset performance. The use of TypeScript ensured the integrity and security of all financial data handled by the application."
+            },
+            {
+              "title": "Modern & Responsive UI/UX",
+              "text": "I crafted a modern and fully responsive interface using Tailwind CSS and Shadcn UI, implementing interactive charts and a Dark Mode theme for a functional and visually appealing user experience (UX)."
+            }
+          ],
+          "stacks": [
+            { "nameStack": "Next.js", "iconStack": "devicon:nextjs" },
+            { "nameStack": "React", "iconStack": "devicon:react" },
+            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
+            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" }
+          ],
+          "gallery": [
+            {
+              "src": "/images/crypto-dashboard/crypto-dashboard-2.png",
+              "alt": "Crypto Dashboard portfolio screen",
+              "title": "My Portfolio"
+            },
+            {
+              "src": "/images/crypto-dashboard/crypto-dashboard-3.png",
+              "alt": "Crypto Dashboard in dark mode",
+              "title": "Dark Mode Theme"
+            },
+            {
+              "src": "/images/crypto-dashboard/crypto-dashboard-4.png",
+              "alt": "Crypto Dashboard in dark mode",
+              "title": "Dark Mode Theme"
+            }
+          ]
+        }
+      },
+      "code-connect-auth": {
+        "id": 7,
+        "slug": "code-connect-auth",
+        "src": "/images/code-connect/code-connect-4.png",
+        "alt": "Code Connect authentication interface",
+        "title": "SPA Authentication System with Social Login",
+        "tag": "CODE CONNECT",
+        "viewProject": "View Project",
+        "projectUrl": "https://bueno-code-connect.vercel.app/",
+        "badges": ["WEB APPLICATION", "AUTHENTICATION", "SECURITY", "UX"],
+        "description": "I developed a complete authentication system as a Single-Page Application (SPA), focusing on a streamlined user experience with social login and fluid navigation.",
+        "details": {
+          "titleParagraph": "My responsibility was to create a robust and intuitive authentication flow, from the user interface to the navigation logic:",
+          "strongParagraphs": [
+            {
+              "title": "Streamlined Social Login",
+              "text": "I implemented a secure authentication system featuring OAuth providers like Google and GitHub, simplifying the sign-up process to enhance the new user experience."
+            },
+            {
+              "title": "Fluid SPA Navigation",
+              "text": "I developed the entire login and registration flow as a Single-Page Application (SPA) using React Router DOM, ensuring instant transitions between routes without page reloads."
+            },
+            {
+              "title": "Responsive UI & Real-Time Validation",
+              "text": "I built a modern interface with Tailwind CSS and implemented client-side form validation, providing users with immediate feedback for a frictionless sign-up experience."
+            }
+          ],
+          "stacks": [
+            { "nameStack": "React", "iconStack": "devicon:react" },
+            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
+            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" }
+          ],
+          "gallery": [
+            {
+              "src": "/images/code-connect/code-connect-1.png",
+              "alt": "Code Connect Login Screen",
+              "title": "Login Screen"
+            },
+            {
+              "src": "/images/code-connect/code-connect-2.png",
+              "alt": "Registration Form",
+              "title": "Registration Screen"
+            },
+            {
+              "src": "/images/code-connect/code-connect-3.png",
+              "alt": "Social login options",
+              "title": "Social Login"
+            },
+            {
+              "src": "/images/code-connect/code-connect-4.png",
+              "alt": "Desktop Vision",
+              "title": "Desktop Vision"
+            }
+          ]
+        }
+      },
+      "bueno-books": {
+        "id": 8,
+        "slug": "bueno-books",
+        "src": "/images/bueno-books/bueno-books-1.png",
+        "alt": "Interface of the Bueno Books platform",
+        "title": "Book Discovery Platform with React",
+        "tag": "WEB PROJECT",
+        "viewProject": "View Project",
+        "projectUrl": "https://bueno-books.vercel.app/",
+        "badges": [
+          "WEB APPLICATION",
+          "API INTEGRATION",
+          "UI/UX",
+          "COMPONENT-BASED"
+        ],
+        "description": "I developed Bueno Books, a book discovery platform featuring real-time search, built on a reusable component architecture with React and Tailwind CSS to ensure scalability.",
+        "details": {
+          "titleParagraph": "As a Software Engineer, I focused on creating an interactive and scalable user experience, from data fetching to visual presentation:",
+          "strongParagraphs": [
+            {
+              "title": "Real-Time Dynamic Search",
+              "text": "I implemented a search feature that filters and displays results from a book API instantly, using React component state to manage the query and update the UI without delay."
+            },
+            {
+              "title": "Scalable Component Architecture",
+              "text": "I architected the UI with reusable components (like Header and BookCard) in React and utilized Tailwind CSS for rapid, consistent styling, ensuring clean, maintainable, and scalable code."
+            },
+            {
+              "title": "Engaging Dynamic Content",
+              "text": "I created dynamic sections such as 'Latest Releases' and 'Suggestions' by consuming multiple API endpoints to enrich the platform and encourage user discovery of new titles."
+            }
+          ],
+          "stacks": [
+            { "nameStack": "React", "iconStack": "devicon:react" },
+            { "nameStack": "JavaScript", "iconStack": "devicon:javascript" },
+            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" }
+          ],
+          "gallery": [
+            {
+              "src": "/images/bueno-books/bueno-books-1.png",
+              "alt": "Real-time book search on Bueno Books",
+              "title": "Real-Time Search"
+            },
+            {
+              "src": "/images/bueno-books/bueno-books-2.png",
+              "alt": "Bueno Books homepage with latest releases",
+              "title": "Main Page"
+            },
+            {
+              "src": "/images/bueno-books/bueno-books-2.png",
+              "alt": "Example of reusable UI components",
+              "title": "Reusable Components"
             }
           ]
         }
