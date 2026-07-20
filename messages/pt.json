@@ -203,7 +203,7 @@
       "resume-generator-cv": {
         "id": 3,
         "slug": "resume-generator-cv",
-        "src": "/images/react-todo/react-todo-dark-1.png",
+        "src": "/images/resume-generator-cv/resume-generator-cv-1.png",
         "alt": "Interface Gerador de Currículo CV",
         "title": "Gerador de Currículo CV",
         "tag": "PROJETO PESSOAL",
@@ -236,12 +236,17 @@
           ],
           "gallery": [
             {
-              "src": "/images/react-todo/react-todo-1.png",
+              "src": "/images/resume-generator-cv/resume-generator-cv-1.png",
               "alt": "Calculadora em tela de desktop",
               "title": "Visão Desktop White"
             },
             {
-              "src": "/images/react-todo/react-todo-dark-1.png",
+              "src": "/images/resume-generator-cv/resume-generator-cv-2.png",
+              "alt": "Calculadora em tela de desktop",
+              "title": "Visão Desktop White"
+            },
+            {
+              "src": "/images/resume-generator-cv/resume-generator-cv-3.png",
               "alt": "Calculadora em tela de desktop",
               "title": "Visão Desktop Dark"
             }
