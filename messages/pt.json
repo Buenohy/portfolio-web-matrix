@@ -200,8 +200,56 @@
           ]
         }
       },
-      "react-todo": {
+      "resume-generator-cv": {
         "id": 3,
+        "slug": "resume-generator-cv",
+        "src": "/images/react-todo/react-todo-dark-1.png",
+        "alt": "Interface Gerador de Currículo CV",
+        "title": "Gerador de Currículo CV",
+        "tag": "PROJETO PESSOAL",
+        "viewProject": "View Project",
+        "projectUrl": "https://bueno-react-todo.vercel.app/",
+        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
+        "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
+        "details": {
+          "titleParagraph": "Como Engenheiro de Software, foquei em construir uma aplicação robusta e eficiente do zero, sem o uso de frameworks:",
+          "strongParagraphs": [
+            {
+              "title": "Motor de Cálculo Inteligente",
+              "text": "Desenvolvi o motor de cálculo do zero em JavaScript puro, implementando um algoritmo que analisa e avalia expressões matemáticas, respeitando a ordem de operações (PEMDAS) e o uso de parênteses."
+            },
+            {
+              "title": "Interface Responsiva com HTML/CSS",
+              "text": "Construí uma interface de usuário moderna e totalmente responsiva com HTML5 semântico e CSS Grid, garantindo uma experiência de uso intuitiva e consistente em desktops, tablets e dispositivos móveis."
+            },
+            {
+              "title": "Gerenciamento de Estado sem Frameworks",
+              "text": "Criei um sistema de gerenciamento de estado em JavaScript puro para controlar a entrada do usuário, as operações pendentes e a exibição do resultado, manipulando o DOM de forma eficiente sem depender de bibliotecas externas."
+            }
+          ],
+          "stacks": [
+            { "nameStack": "React", "iconStack": "devicon:react" },
+            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
+            { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" },
+            { "nameStack": "React Router", "iconStack": "devicon:reactrouter" },
+            { "nameStack": "Vite", "iconStack": "devicon:vitejs" }
+          ],
+          "gallery": [
+            {
+              "src": "/images/react-todo/react-todo-1.png",
+              "alt": "Calculadora em tela de desktop",
+              "title": "Visão Desktop White"
+            },
+            {
+              "src": "/images/react-todo/react-todo-dark-1.png",
+              "alt": "Calculadora em tela de desktop",
+              "title": "Visão Desktop Dark"
+            }
+          ]
+        }
+      },
+      "react-todo": {
+        "id": 4,
         "slug": "react-todo",
         "src": "/images/react-todo/react-todo-dark-1.png",
         "alt": "Interface da Calculadora JavaScript",
@@ -249,7 +297,7 @@
         }
       },
       "react-calculator": {
-        "id": 4,
+        "id": 5,
         "slug": "react-calculator",
         "src": "/images/react-calculator/react-calculator-1.png",
         "alt": "Interface da Calculadora JavaScript",
@@ -302,7 +350,7 @@
         }
       },
       "javascript-calculator": {
-        "id": 5,
+        "id": 6,
         "slug": "javascript-calculator",
         "src": "/images/javascript-calculator/javascript-calculator-1.png",
         "alt": "Interface da Calculadora JavaScript",
@@ -353,7 +401,7 @@
         }
       },
       "crypto-dashboard": {
-        "id": 6,
+        "id": 7,
         "slug": "crypto-dashboard",
         "src": "/images/crypto-dashboard/crypto-dashboard-2.png",
         "alt": "Interface do Crypto Dashboard",
@@ -410,7 +458,7 @@
         }
       },
       "code-connect-auth": {
-        "id": 7,
+        "id": 8,
         "slug": "code-connect-auth",
         "src": "/images/code-connect/code-connect-4.png",
         "alt": "Interface de autenticação do Code Connect",
@@ -466,7 +514,7 @@
         }
       },
       "bueno-books": {
-        "id": 8,
+        "id": 9,
         "slug": "bueno-books",
         "src": "/images/bueno-books/bueno-books-1.png",
         "alt": "Interface da plataforma de livros Bueno Books",
