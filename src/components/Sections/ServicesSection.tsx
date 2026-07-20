@@ -49,9 +49,9 @@ export default function ServicesSection({
 
   return (
     <section className="flex flex-col gap-10 px-5 pb-30 lg:px-10" id="services">
-      <div className="mx-auto max-w-7xl">
-        <div className="lg:flex lg:self-start">
-          <div className="relative flex h-[100px] w-fit items-center justify-center md:h-[200px] lg:h-[300px]">
+      <div className="mx-auto flex w-full max-w-7xl justify-center">
+        <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
+          <div className="relative mx-auto flex h-[150px] w-full max-w-[150px] flex-shrink-0 items-center justify-center md:h-[250px] md:max-w-[250px] lg:mx-0 lg:h-[300px] lg:max-w-[300px]">
             <Canvas camera={{ position: [5, 0, 10], fov: 35 }}>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={0.5} />
@@ -83,7 +83,7 @@ export default function ServicesSection({
               </Suspense>
             </Canvas>
           </div>
-          <div>
+          <div className="max-w-2xl flex-1">
             <h2 className="text-dark-black dark:text-white-pure my-1 text-xl font-bold uppercase sm:text-2xl lg:mb-4">
               {translations.sectionTitle}
             </h2>
