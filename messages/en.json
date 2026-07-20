@@ -141,27 +141,32 @@
         "id": 2,
         "slug": "gallery-plus",
         "src": "/images/gallery-plus/gallery-plus-1.png",
-        "alt": "Interface da Calculadora JavaScript",
-        "title": "Gallery Plus",
-        "tag": "PROJETO PESSOAL",
+        "alt": "Gallery Plus Interface",
+        "title": "Gallery Plus: Advanced Image Management",
+        "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
         "projectUrl": "https://bueno-gallery-plus.vercel.app/",
-        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
-        "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
+        "badges": [
+          "WEB APPLICATION",
+          "API INTEGRATION",
+          "STATE MANAGEMENT",
+          "UI/UX"
+        ],
+        "description": "I developed a high-performance image gallery featuring dynamic filtering and advanced caching, integrating TanStack React Query and Nuqs for seamless URL state persistence and optimal user experience.",
         "details": {
-          "titleParagraph": "Como Engenheiro de Software, foquei em construir uma aplicação robusta e eficiente do zero, sem o uso de frameworks:",
+          "titleParagraph": "As a Software Engineer, I focused on building a robust, type-safe architecture to ensure optimal data fetching and integrity:",
           "strongParagraphs": [
             {
-              "title": "Motor de Cálculo Inteligente",
-              "text": "Desenvolvi o motor de cálculo do zero em JavaScript puro, implementando um algoritmo que analisa e avalia expressões matemáticas, respeitando a ordem de operações (PEMDAS) e o uso de parênteses."
+              "title": "Dynamic Caching and URL State",
+              "text": "I implemented advanced caching and filtering using TanStack React Query combined with Nuqs, enabling instantaneous state persistence directly in the URL search parameters."
             },
             {
-              "title": "Interface Responsiva com HTML/CSS",
-              "text": "Construí uma interface de usuário moderna e totalmente responsiva com HTML5 semântico e CSS Grid, garantindo uma experiência de uso intuitiva e consistente em desktops, tablets e dispositivos móveis."
+              "title": "Performance Optimization with Debounce",
+              "text": "I reduced excessive network requests to the backend API by engineering a custom debounce algorithm using React Hooks, significantly improving search performance."
             },
             {
-              "title": "Gerenciamento de Estado sem Frameworks",
-              "text": "Criei um sistema de gerenciamento de estado em JavaScript puro para controlar a entrada do usuário, as operações pendentes e a exibição do resultado, manipulando o DOM de forma eficiente sem depender de bibliotecas externas."
+              "title": "Type-Safe Data Mutations",
+              "text": "I guaranteed data integrity during photo uploads and album creation by implementing strict schema validations using Zod alongside end-to-end type safety with TypeScript."
             }
           ],
           "stacks": [
@@ -174,28 +179,28 @@
           "gallery": [
             {
               "src": "/images/gallery-plus/gallery-plus-1.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop"
+              "alt": "Gallery Plus on desktop screen",
+              "title": "Desktop View"
             },
             {
               "src": "/images/gallery-plus/gallery-plus-2.png",
-              "alt": "Calculadora em tela de celular",
-              "title": "Visão Mobile"
+              "alt": "Gallery Plus on mobile screen",
+              "title": "Mobile View"
             },
             {
               "src": "/images/gallery-plus/gallery-plus-3.png",
-              "alt": "Calculadora realizando uma operação",
-              "title": "Cálculo em Ação"
+              "alt": "Dynamic photo search in action",
+              "title": "Dynamic Search"
             },
             {
               "src": "/images/gallery-plus/gallery-plus-4.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
+              "alt": "Album creation interface",
+              "title": "Album Management"
             },
             {
               "src": "/images/gallery-plus/gallery-plus-4.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
+              "alt": "Detailed photo view",
+              "title": "Photo Details"
             }
           ]
         }
@@ -204,51 +209,51 @@
         "id": 3,
         "slug": "resume-generator-cv",
         "src": "/images/resume-generator-cv/resume-generator-cv-1.png",
-        "alt": "Interface Resume Generator CV",
-        "title": "Resume Generator CV",
-        "tag": "PROJETO PESSOAL",
+        "alt": "Resume Generator CV Interface",
+        "title": "ATS-Optimized Resume Generator Platform",
+        "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
         "projectUrl": "https://bueno-react-todo.vercel.app/",
-        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
-        "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
+        "badges": ["FULL STACK", "PERFORMANCE", "I18N", "UI/UX"],
+        "description": "I built a full-stack platform for generating ATS-optimized resumes, featuring real-time PDF rendering, seamless internationalization, and perfect performance scores on Google PageSpeed Insights.",
         "details": {
-          "titleParagraph": "Como Engenheiro de Software, foquei em construir uma aplicação robusta e eficiente do zero, sem o uso de frameworks:",
+          "titleParagraph": "My goal was to deliver a blazingly fast, production-ready application with a robust front-end and flawless user experience:",
           "strongParagraphs": [
             {
-              "title": "Motor de Cálculo Inteligente",
-              "text": "Desenvolvi o motor de cálculo do zero em JavaScript puro, implementando um algoritmo que analisa e avalia expressões matemáticas, respeitando a ordem de operações (PEMDAS) e o uso de parênteses."
+              "title": "Maximum Performance and SEO",
+              "text": "I orchestrated the deployment on Vercel and Render, achieving perfect 100/100 scores in Performance, SEO, and Best Practices with a lightning-fast 0.5s LCP."
             },
             {
-              "title": "Interface Responsiva com HTML/CSS",
-              "text": "Construí uma interface de usuário moderna e totalmente responsiva com HTML5 semântico e CSS Grid, garantindo uma experiência de uso intuitiva e consistente em desktops, tablets e dispositivos móveis."
+              "title": "Zero-Latency Form Synchronization",
+              "text": "I ensured real-time form updates without latency by managing global state with Zustand and enforcing strict data validation with Zod."
             },
             {
-              "title": "Gerenciamento de Estado sem Frameworks",
-              "text": "Criei um sistema de gerenciamento de estado em JavaScript puro para controlar a entrada do usuário, as operações pendentes e a exibição do resultado, manipulando o DOM de forma eficiente sem depender de bibliotecas externas."
+              "title": "Dynamic i18n & Persistent Dark Mode",
+              "text": "I enhanced the user experience by integrating dynamic internationalization (en-US and pt-BR) and a persistent Dark Mode theme for maximum visual comfort."
             }
           ],
           "stacks": [
+            { "nameStack": "Next.js", "iconStack": "devicon:nextjs" },
             { "nameStack": "React", "iconStack": "devicon:react" },
             { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
             { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" },
-            { "nameStack": "React Router", "iconStack": "devicon:reactrouter" },
-            { "nameStack": "Vite", "iconStack": "devicon:vitejs" }
+            { "nameStack": "PostgreSQL", "iconStack": "devicon:postgresql" }
           ],
           "gallery": [
             {
               "src": "/images/resume-generator-cv/resume-generator-cv-1.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop White"
+              "alt": "Resume Generator in Light Mode",
+              "title": "Desktop View - Light Mode"
             },
             {
               "src": "/images/resume-generator-cv/resume-generator-cv-2.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop White"
+              "alt": "Resume data input form",
+              "title": "Form Interface"
             },
             {
               "src": "/images/resume-generator-cv/resume-generator-cv-3.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop Dark"
+              "alt": "Resume Generator in Dark Mode",
+              "title": "Desktop View - Dark Mode"
             }
           ]
         }
@@ -257,27 +262,32 @@
         "id": 4,
         "slug": "react-todo",
         "src": "/images/react-todo/react-todo-dark-1.png",
-        "alt": "Interface da Calculadora JavaScript",
-        "title": "React Todo",
-        "tag": "PROJETO PESSOAL",
+        "alt": "React Todo Interface",
+        "title": "Scalable React To-Do Application",
+        "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
         "projectUrl": "https://bueno-react-todo.vercel.app/",
-        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
-        "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
+        "badges": [
+          "WEB APPLICATION",
+          "STATE MANAGEMENT",
+          "UI COMPONENTS",
+          "SIDE PROJECT"
+        ],
+        "description": "I developed a highly scalable task management application utilizing custom React Hooks and the Local Storage API for seamless data persistence without a backend.",
         "details": {
-          "titleParagraph": "Como Engenheiro de Software, foquei em construir uma aplicação robusta e eficiente do zero, sem o uso de frameworks:",
+          "titleParagraph": "I aimed to build a standard, modular front-end architecture focusing on user experience and reusable interface components:",
           "strongParagraphs": [
             {
-              "title": "Motor de Cálculo Inteligente",
-              "text": "Desenvolvi o motor de cálculo do zero em JavaScript puro, implementando um algoritmo que analisa e avalia expressões matemáticas, respeitando a ordem de operações (PEMDAS) e o uso de parênteses."
+              "title": "Local Data Persistence",
+              "text": "I engineered the CRUD state management using Custom React Hooks and the browser's Local Storage API, functioning as a robust local database to retain user tasks across sessions."
             },
             {
-              "title": "Interface Responsiva com HTML/CSS",
-              "text": "Construí uma interface de usuário moderna e totalmente responsiva com HTML5 semântico e CSS Grid, garantindo uma experiência de uso intuitiva e consistente em desktops, tablets e dispositivos móveis."
+              "title": "Enhanced UX with Skeleton Loaders",
+              "text": "I optimized visual feedback during data fetching by implementing Skeleton Loaders and built a responsive native Light/Dark theme toggle using Tailwind CSS."
             },
             {
-              "title": "Gerenciamento de Estado sem Frameworks",
-              "text": "Criei um sistema de gerenciamento de estado em JavaScript puro para controlar a entrada do usuário, as operações pendentes e a exibição do resultado, manipulando o DOM de forma eficiente sem depender de bibliotecas externas."
+              "title": "Standardized UI Component Library",
+              "text": "I implemented a scalable architecture using class-variance-authority (CVA) to build an internal standardized UI component library, alongside React Router for fluid navigation."
             }
           ],
           "stacks": [
@@ -290,13 +300,13 @@
           "gallery": [
             {
               "src": "/images/react-todo/react-todo-1.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop White"
+              "alt": "React Todo displayed in Light Mode",
+              "title": "Desktop View - Light Theme"
             },
             {
               "src": "/images/react-todo/react-todo-dark-1.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop Dark"
+              "alt": "React Todo displayed in Dark Mode",
+              "title": "Desktop View - Dark Theme"
             }
           ]
         }
@@ -305,32 +315,37 @@
         "id": 5,
         "slug": "react-calculator",
         "src": "/images/react-calculator/react-calculator-1.png",
-        "alt": "Interface da Calculadora JavaScript",
-        "title": "Calculadora React",
-        "tag": "PROJETO PESSOAL",
+        "alt": "React Calculator Interface",
+        "title": "React Calculator with Persistent History",
+        "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
         "projectUrl": "https://bueno-calculator-react.vercel.app/",
-        "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
-        "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
+        "badges": [
+          "WEB APPLICATION",
+          "STATE MANAGEMENT",
+          "DESIGN SYSTEM",
+          "SIDE PROJECT"
+        ],
+        "description": "I built a modern web calculator focusing on a clear separation of mathematical logic and UI presentation, featuring global state management and a persistent operation history.",
         "details": {
-          "titleParagraph": "Como Engenheiro de Software, foquei em construir uma aplicação robusta e eficiente do zero, sem o uso de frameworks:",
+          "titleParagraph": "I designed this application to demonstrate advanced React concepts, modular architecture, and the creation of an internal Design System:",
           "strongParagraphs": [
             {
-              "title": "Motor de Cálculo Inteligente",
-              "text": "Desenvolvi o motor de cálculo do zero em JavaScript puro, implementando um algoritmo que analisa e avalia expressões matemáticas, respeitando a ordem de operações (PEMDAS) e o uso de parênteses."
+              "title": "Modular Calculation Engine",
+              "text": "I developed the calculation engine utilizing the React Context API and Custom Hooks, ensuring global state management and a clean separation of concerns from the UI."
             },
             {
-              "title": "Interface Responsiva com HTML/CSS",
-              "text": "Construí uma interface de usuário moderna e totalmente responsiva com HTML5 semântico e CSS Grid, garantindo uma experiência de uso intuitiva e consistente em desktops, tablets e dispositivos móveis."
+              "title": "Persistent Operation History",
+              "text": "I implemented an interactive math history panel that seamlessly integrates with the browser's Local Storage API, optimizing user data retention across page reloads."
             },
             {
-              "title": "Gerenciamento de Estado sem Frameworks",
-              "text": "Criei um sistema de gerenciamento de estado em JavaScript puro para controlar a entrada do usuário, as operações pendentes e a exibição do resultado, manipulando o DOM de forma eficiente sem depender de bibliotecas externas."
+              "title": "Internal Design System",
+              "text": "I constructed a highly responsive user interface by building reusable components based on variant props, applying modern styling techniques with Tailwind CSS."
             }
           ],
           "stacks": [
             { "nameStack": "React", "iconStack": "devicon:react" },
-            { "nameStack": "TypeScript", "iconStack": "devicon:typescript" },
+            { "nameStack": "JavaScript", "iconStack": "devicon:javascript" },
             { "nameStack": "Tailwind CSS", "iconStack": "devicon:tailwindcss" },
             { "nameStack": "React Router", "iconStack": "devicon:reactrouter" },
             { "nameStack": "Vite", "iconStack": "devicon:vitejs" }
@@ -338,18 +353,18 @@
           "gallery": [
             {
               "src": "/images/react-calculator/react-calculator-1.png",
-              "alt": "Calculadora em tela de desktop",
-              "title": "Visão Desktop"
+              "alt": "Calculator on desktop screen",
+              "title": "Desktop View"
             },
             {
               "src": "/images/react-calculator/react-calculator-2.png",
-              "alt": "Calculadora realizando uma operação",
-              "title": "Cálculo em Ação"
+              "alt": "Calculator performing an operation",
+              "title": "Calculation in Action"
             },
             {
               "src": "/images/react-calculator/react-calculator-3.png",
-              "alt": "Calculadora Resultado",
-              "title": "Resultado"
+              "alt": "Calculator history panel",
+              "title": "Persistent History"
             }
           ]
         }
