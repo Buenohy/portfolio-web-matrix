@@ -7,6 +7,7 @@ export interface Project {
   alt: string;
   title: string;
   tag: string;
+  viewProject: string;
   badges: string[];
   description: string;
   details: {
