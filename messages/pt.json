@@ -554,78 +554,126 @@
       },
       {
         "id": 6,
+        "icon": "devicon:nestjs",
+        "name": "Nestjs",
+        "alt": "Ícone do Nestjs"
+      },
+      {
+        "id": 7,
+        "icon": "devicon:docker",
+        "name": "Docker",
+        "alt": "Ícone do Docker"
+      },
+      {
+        "id": 8,
+        "icon": "devicon:kubernetes",
+        "name": "Kubernetes",
+        "alt": "Ícone do Kubernetes"
+      },
+      {
+        "id": 9,
+        "icon": "devicon:amazonwebservices",
+        "name": "AWS",
+        "alt": "Ícone do AWS"
+      },
+      {
+        "id": 10,
+        "icon": "devicon:azure",
+        "name": "Azure",
+        "alt": "Ícone do Azure"
+      },
+      {
+        "id": 11,
+        "icon": "devicon:azuresqldatabase",
+        "name": "SQL",
+        "alt": "Ícone do SQL"
+      },
+      {
+        "id": 12,
+        "icon": "devicon:python",
+        "name": "Python",
+        "alt": "Ícone do Python"
+      },
+      {
+        "id": 13,
+        "icon": "devicon:prisma",
+        "name": "Prisma",
+        "alt": "Ícone do Prisma"
+      },
+      {
+        "id": 14,
         "icon": "devicon:html5",
         "name": "Html 5",
         "alt": "Ícone do Html 5"
       },
       {
-        "id": 7,
+        "id": 15,
         "icon": "devicon:css3",
         "name": "Css 3",
         "alt": "Ícone do Css 3"
       },
       {
-        "id": 8,
+        "id": 16,
         "icon": "devicon:github",
         "name": "Github",
         "alt": "Ícone do Github"
       },
       {
-        "id": 9,
+        "id": 17,
         "icon": "devicon:gitlab",
         "name": "Gitlab",
         "alt": "Ícone do Gitlab"
       },
       {
-        "id": 10,
+        "id": 18,
         "icon": "logos:visual-studio-code",
         "name": "VS Code",
         "alt": "Ícone do Visual Studio Code"
       },
       {
-        "id": 11,
+        "id": 19,
         "icon": "devicon:figma",
         "name": "Figma",
         "alt": "Ícone do Figma"
       },
       {
-        "id": 12,
+        "id": 20,
         "icon": "devicon:xd",
         "name": "Xd",
         "alt": "Ícone do Adobe Xd"
       },
       {
-        "id": 13,
+        "id": 21,
         "icon": "devicon:sass",
         "name": "Sass",
         "alt": "Ícone do Sass"
       },
       {
-        "id": 14,
+        "id": 22,
         "icon": "skill-icons:wordpress",
         "name": "WordPress",
         "alt": "Ícone do WordPress"
       },
       {
-        "id": 15,
+        "id": 23,
         "icon": "logos:shopify",
         "name": "Shopify",
         "alt": "Ícone do Shopify"
       },
       {
-        "id": 16,
+        "id": 24,
         "icon": "devicon:bootstrap",
         "name": "Bootstrap",
         "alt": "Ícone do Bootstrap"
       },
       {
-        "id": 17,
+        "id": 25,
         "icon": "devicon:bitbucket",
         "name": "Bitbucket",
         "alt": "Ícone do Bitbucket"
       },
       {
-        "id": 18,
+        "id": 26,
         "icon": "devicon:photoshop",
         "name": "Photoshop",
         "alt": "Ícone do Adobe Photoshop"
