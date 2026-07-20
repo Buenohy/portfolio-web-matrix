@@ -68,6 +68,7 @@
         "title": "Real-Time Cryptocurrency Dashboard",
         "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-crypto-dashboard.vercel.app/",
         "badges": [
           "WEB APPLICATION",
           "DATA VISUALIZATION",
@@ -124,6 +125,7 @@
         "title": "High-Performance Personal Portfolio with Next.js",
         "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-portfolio-web.vercel.app/",
         "badges": ["WEB APPLICATION", "SEO", "SSR", "UI/UX"],
         "description": "I developed my professional portfolio with Next.js and TypeScript, focusing on performance, SEO optimization via SSR, and an interactive user experience with project filtering and Dark Mode.",
         "details": {
@@ -200,6 +202,7 @@
         "title": "SPA Authentication System with Social Login",
         "tag": "CODE CONNECT",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-code-connect.vercel.app/",
         "badges": ["WEB APPLICATION", "AUTHENTICATION", "SECURITY", "UX"],
         "description": "I developed a complete authentication system as a Single-Page Application (SPA), focusing on a streamlined user experience with social login and fluid navigation.",
         "details": {
@@ -255,6 +258,7 @@
         "title": "Book Discovery Platform with React",
         "tag": "WEB PROJECT",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-books.vercel.app/",
         "badges": [
           "WEB APPLICATION",
           "API INTEGRATION",
@@ -310,6 +314,7 @@
         "title": "Responsive Calculator with Vanilla JavaScript",
         "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-javascript-calculator.vercel.app/",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "I developed a fully functional web calculator using vanilla JavaScript, creating a custom calculation engine that parses complex mathematical expressions and a responsive interface for a seamless experience on any device.",
         "details": {
@@ -360,6 +365,7 @@
         "title": "Calculadora React",
         "tag": "PROJETO PESSOAL",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-calculator-react.vercel.app/",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
         "details": {
@@ -412,6 +418,7 @@
         "title": "Gallery Plus",
         "tag": "PROJETO PESSOAL",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-gallery-plus.vercel.app/",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
         "details": {
@@ -474,6 +481,7 @@
         "title": "React Todo",
         "tag": "PROJETO PESSOAL",
         "viewProject": "View Project",
+        "projectUrl": "https://bueno-react-todo.vercel.app/",
         "badges": ["WEB APPLICATION", "ALGORITHMS", "UI/UX", "SIDE PROJECT"],
         "description": "Desenvolvi uma calculadora web totalmente funcional com JavaScript puro, criando um motor de cálculo que interpreta expressões matemáticas complexas e uma interface responsiva para uma experiência impecável em qualquer dispositivo.",
         "details": {

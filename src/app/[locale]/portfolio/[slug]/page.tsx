@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils';
 type Project = {
   id: number;
   slug: string;
+  projectUrl: string;
   src: string;
   alt: string;
   title: string;
@@ -184,13 +185,15 @@ export default function ProjectDetailsPage() {
 
           {/* External website link button */}
           <div className="border-t border-white/10 pt-8">
-            <Link
-              href="/"
+            <a
+              href={project.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="button-primary button-outline flex w-full items-center justify-center gap-2 rounded-lg py-3 text-sm font-semibold sm:text-base"
             >
               <span>{t('seeMoreButton')}</span>
               <GoArrowUpRight />
-            </Link>
+            </a>
           </div>
         </section>
       </article>
