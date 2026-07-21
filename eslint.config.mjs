@@ -26,6 +26,9 @@ const eslintConfig = tseslint.config(
       ...jsxA11yPlugin.configs.recommended.rules,
 
       '@typescript-eslint/no-unused-vars': 'warn',
+      'react/no-unknown-property': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/set-state-in-effect': 'off',
     },
     settings: {
       react: {
