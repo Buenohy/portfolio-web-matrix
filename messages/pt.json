@@ -39,7 +39,8 @@
   },
   "HomeSection": {
     "greeting": "Olá, Eu Sou",
-    "nameCreator": "Gabriel<br></br>Bueno",
+    "nameCreator": "Gabriel\nBueno",
+    "role": "A Full Stack",
     "mainTitle": "Engenheiro de Software que constrói<br></br>interfaces de alta performance.",
     "cvButton": "Download CV",
     "avatarAriaLabel": "Ir para a seção Sobre Mim",

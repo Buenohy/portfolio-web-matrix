@@ -39,7 +39,8 @@
   },
   "HomeSection": {
     "greeting": "Hello, I'm",
-    "nameCreator": "Gabriel<br></br>Bueno",
+    "nameCreator": "Gabriel\nBueno",
+    "role": "A Full Stack",
     "mainTitle": "Software Engineer who builds<br></br>high-performance web interfaces.",
     "cvButton": "Download CV",
     "avatarAriaLabel": "Go to About Me section",

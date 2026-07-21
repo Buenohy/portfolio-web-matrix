@@ -97,6 +97,7 @@ type HomeSectionProps = {
   translations: {
     greeting: string;
     nameCreator: string;
+    role: string;
     mainTitle: React.ReactNode;
     cvButton: string;
     avatarAriaLabel: string;
@@ -366,7 +367,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             */}
             <h1
               ref={typingNameRef}
-              className="text-black-matrix dark:text-white-matrix mt-1 min-h-[36px] text-2xl font-bold tracking-tighter uppercase md:min-h-[48px] md:text-4xl"
+              className="text-black-matrix dark:text-white-matrix mt-1 min-h-[60px] text-2xl font-bold tracking-tighter whitespace-pre-line uppercase md:min-h-[80px] md:text-4xl"
             >
               {translations.nameCreator}
             </h1>
@@ -386,7 +387,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
               ref={typingRoleRef}
               className="text-green-terminal dark:text-green-matrix min-h-[28px] text-xl leading-tight font-light"
             >
-              A Full Stack
+              {translations.role}
             </h2>
 
             {/*
