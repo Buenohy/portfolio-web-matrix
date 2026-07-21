@@ -11,19 +11,20 @@ interface AppTransitionProviderProps {
 export function AppTransitionProvider({
   children,
 }: AppTransitionProviderProps) {
-  const { progress } = useProgress();
+  // Extraímos "progress" para a barra e "active" para saber se ainda está carregando
+  const { progress, active } = useProgress();
   const [isReady, setIsReady] = useState(false);
   const [animationCompleted, setAnimationCompleted] = useState(false);
 
   useEffect(() => {
     if (isReady) {
-      // Wait for the 1000ms CSS scale transition to finish
+      // Aguarda a transição de CSS de 1000ms finalizar
       const timer = setTimeout(() => {
-        setAnimationCompleted(true); // Strip transform classes to fix GSAP fixed positioning
+        setAnimationCompleted(true); // Remove classes de escala para evitar bugs com GSAP
 
         if (typeof window !== 'undefined') {
-          (window as any).__APP_READY__ = true; // Set global flag
-          window.dispatchEvent(new Event('app-ready')); // Notify components
+          (window as any).__APP_READY__ = true; // Define flag global
+          window.dispatchEvent(new Event('app-ready')); // Notifica outros componentes
         }
       }, 1000);
 
@@ -33,12 +34,16 @@ export function AppTransitionProvider({
 
   return (
     <>
-      <LoadingScreen progress={progress} onFinished={() => setIsReady(true)} />
+      <LoadingScreen
+        progress={progress}
+        active={active}
+        onFinished={() => setIsReady(true)}
+      />
 
       <div
         className={`relative z-10 min-h-screen ${
           animationCompleted
-            ? '' // Once completed, remove scale/transition classes entirely so GSAP pins correctly
+            ? ''
             : `transition-all duration-1000 ease-out ${
                 isReady
                   ? 'scale-100 opacity-100 blur-none'
