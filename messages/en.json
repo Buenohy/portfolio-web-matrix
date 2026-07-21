@@ -70,7 +70,7 @@
         "title": "High-Performance Personal Portfolio with Next.js",
         "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
-        "projectUrl": "https://bueno-portfolio-web.vercel.app/",
+        "projectUrl": "https://portfolio-web-matrix.vercel.app/",
         "badges": ["WEB APPLICATION", "SEO", "SSR", "UI/UX"],
         "description": "I developed my professional portfolio with Next.js and TypeScript, focusing on performance, SEO optimization via SSR, and an interactive user experience with project filtering and Dark Mode.",
         "details": {
@@ -220,7 +220,7 @@
         "title": "ATS-Optimized Resume Generator Platform",
         "tag": "PERSONAL PROJECT",
         "viewProject": "View Project",
-        "projectUrl": "https://bueno-react-todo.vercel.app/",
+        "projectUrl": "https://resume-generator-cv.vercel.app/",
         "badges": ["FULL STACK", "PERFORMANCE", "I18N", "UI/UX"],
         "description": "I built a full-stack platform for generating ATS-optimized resumes, featuring real-time PDF rendering, seamless internationalization, and perfect performance scores on Google PageSpeed Insights.",
         "details": {
