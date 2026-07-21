@@ -98,6 +98,7 @@ type HomeSectionProps = {
     greeting: string;
     nameCreator: string;
     role: string;
+    title: string;
     mainTitle: React.ReactNode;
     cvButton: string;
     avatarAriaLabel: string;
@@ -245,7 +246,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
       // Pause briefly with a cleared screen before restarting the cycle
       matrixTl.to({}, { duration: 1.0 });
     },
-    { scope: containerRef }
+    { dependencies: [translations], scope: containerRef }
   );
 
   // ─── useGSAP #2: Scroll Animation ──────────────────────────────────────────
@@ -355,7 +356,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             */}
             <h1
               ref={typingGreetingRef}
-              className="text-green-terminal dark:text-green-matrix min-h-[28px] text-xl font-light tracking-tighter"
+              className="text-green-terminal dark:text-green-matrix min-h-[28px] text-xl leading-tight font-light tracking-tighter"
             >
               {translations.greeting}
             </h1>
@@ -367,7 +368,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
             */}
             <h1
               ref={typingNameRef}
-              className="text-black-matrix dark:text-white-matrix mt-1 min-h-[60px] text-2xl font-bold tracking-tighter whitespace-pre-line uppercase md:min-h-[80px] md:text-4xl"
+              className="text-black-matrix dark:text-white-matrix mt-1 min-h-[60px] text-2xl leading-tight font-bold tracking-tighter whitespace-pre-line uppercase md:min-h-[80px] md:text-4xl"
             >
               {translations.nameCreator}
             </h1>
@@ -401,7 +402,7 @@ export default function HomeSection({ translations }: HomeSectionProps) {
               ref={typingTitleRef}
               className="text-black-matrix dark:text-white-matrix mt-1 min-h-[60px] text-2xl leading-tight font-bold whitespace-pre-line uppercase md:min-h-[80px] md:text-4xl"
             >
-              {'Software\nEngineer'}
+              {translations.title}
             </h2>
           </div>
         </div>
