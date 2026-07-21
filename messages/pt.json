@@ -65,7 +65,7 @@
       "professional-portfolio": {
         "id": 1,
         "slug": "professional-portfolio",
-        "src": "/images/portfolio-web/portfolio-web-8.png",
+        "src": "/images/portfolio-web/portfolio-web-2.png",
         "alt": "Interface do Portfólio Profissional",
         "title": "Portfólio Pessoal de Alta Performance com Next.js",
         "tag": "PROJETO PESSOAL",
@@ -133,6 +133,11 @@
             },
             {
               "src": "/images/portfolio-web/portfolio-web-8.png",
+              "alt": "Portfólio exibido em modo escuro (Dark Mode)",
+              "title": "Tema Dark Mode"
+            },
+            {
+              "src": "/images/portfolio-web/portfolio-web-9.png",
               "alt": "Portfólio exibido em modo escuro (Dark Mode)",
               "title": "Tema Dark Mode"
             }

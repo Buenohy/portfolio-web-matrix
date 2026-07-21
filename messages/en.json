@@ -65,7 +65,7 @@
       "professional-portfolio": {
         "id": 1,
         "slug": "professional-portfolio",
-        "src": "/images/portfolio-web/portfolio-web-8.png",
+        "src": "/images/portfolio-web/portfolio-web-2.png",
         "alt": "Professional Portfolio Interface",
         "title": "High-Performance Personal Portfolio with Next.js",
         "tag": "PERSONAL PROJECT",
@@ -133,6 +133,11 @@
             },
             {
               "src": "/images/portfolio-web/portfolio-web-8.png",
+              "alt": "Portfolio displayed in Dark Mode",
+              "title": "Dark Mode Theme"
+            },
+            {
+              "src": "/images/portfolio-web/portfolio-web-9.png",
               "alt": "Portfolio displayed in Dark Mode",
               "title": "Dark Mode Theme"
             }
